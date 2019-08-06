@@ -1,0 +1,32 @@
+.b-clinic-logo {
+    &-row {
+        background: white;
+    }
+
+    &-cnt {}
+}
+
+.b-clinic-logo {
+    @include d-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    @include to-center;
+    @include mtb(25    );
+    background-color: rgba(245, 253, 252, 1);
+    padding: 10px;
+    max-width: 700px;
+    
+    &__item {
+        flex-basis: 33.33%;
+        max-width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    &__img {
+        @include img-contain;
+    }
+}

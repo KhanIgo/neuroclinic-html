@@ -1,0 +1,26 @@
+.c-breadcrumbs{
+    &-row{
+        background-color: $greyL;
+    }
+    &-cnt {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+.c-breadcrumbs {
+    display: flex;
+    list-style: none;
+    color: $breadcrumbsColor;
+    &__item {
+    }
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        border-bottom: solid 1px currentColor;
+        padding-bottom: 1px;
+    }
+    &__delimiter{
+        display: inline-block;
+        margin: 0 10px;
+    }
+}

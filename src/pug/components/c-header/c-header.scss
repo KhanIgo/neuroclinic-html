@@ -1,0 +1,25 @@
+.header {
+    &_fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+    &__logo-link {
+        display: block;
+    }
+    &__logo-img {}
+    &__nav {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__social {}
+}

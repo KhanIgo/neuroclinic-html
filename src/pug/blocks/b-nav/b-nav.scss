@@ -1,0 +1,19 @@
+.b-nav {
+//    margin-left: 20px;
+    &-list {
+        list-style: none;
+        display: flex;
+        
+    }
+    &-list__item {
+        margin: 0 15px;
+        &:first-child{ margin-left: 0; }
+        &:last-child{ margin-right: 0; }
+        &_active{}
+    }
+    &-list__link {
+        text-decoration: none;
+        color: $cGrey;
+        font-size: 1.12em;
+    }
+}

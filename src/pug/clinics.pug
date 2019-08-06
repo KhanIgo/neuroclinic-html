@@ -1,0 +1,32 @@
+doctype html
+include parts/_mixins
+html(lang='RU-ru')
+    +head('Клиники')
+    
+    body
+        
+        include components/c-header/c-header
+    
+        -let breadcrumbs = ['Мероприятия нейроклиники'];
+        include components/c-breadcrumbs/i
+        
+        -let pageTitle = 'Клиники'
+        -let pageDesc = 'Чтобы попасть в проект “Развивающее пространство”, <br> оставьте заявку на участие на странице мероприятия'
+        include blocks/b-page-header/i
+        
+        include blocks/b-clinics-logo/i
+        
+        
+        
+        //        - var modifier = '_in-index'
+        //        - var show_more_btn = true
+        //        include components/index-videos/index.pug
+        
+        include components/c-footer/c-footer
+        include parts/_footer-scripts
+        
+        script.
+            jQuery(function($) {});
+  
+  
+    

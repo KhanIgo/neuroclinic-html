@@ -1,0 +1,8 @@
++b.b-news-item
+    +e.img-wrpr
+        if itemImgSrc
+            +e.IMG(src=""+ itemImgSrc).img
+    +e.info
+        +e.date
+            p!= itemDate 
+        +e.A(href='#').link!= itemText

@@ -1,0 +1,27 @@
+.b-appointment {
+    background: url('../img/b-appointment/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    &__container {
+        min-height: 600px;
+        display: flex;
+    }
+    &__imgs {
+        
+    }
+    &__img-wrpr {
+        
+        &_1{}
+        &_2{
+            }
+    }
+    &__calendar {
+        margin-top: -95px;
+        margin-bottom: -20px;
+        margin-left: -170px;
+    }
+    &__main {}
+    &__title {}
+    &__btns {}
+}
