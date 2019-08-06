@@ -1,0 +1,31 @@
++b.b-course-item
+    +e.img-author-desc
+        +e.img-wrpr
+            if itemImg 
+                +e.IMG(src=""+ itemImg).img
+        
+        include ./../b-author/i
+        +e.desc
+            p!= itemDesc
+            
+    +e.info
+        +e.info-item
+            +e.info-item-label 
+                span Дата
+            +e.info-item-value
+                span!= itemDate
+        
+        +e.info-item
+            +e.info-item-label 
+                span Стоимость
+            +e.info-item-value
+                if itemPriceOld
+                    span.price-old!= itemPriceOld
+                span.price!= itemPrice
+                
+        
+        +e.info-item
+            +e.info-item-label 
+                span Длительность
+            +e.info-item-value
+                span!= itemTime

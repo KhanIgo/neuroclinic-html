@@ -1,0 +1,16 @@
++b.b-courses-header-row.row
+    +b.b-courses-header-cnt.cnt
+        +b.b-courses-header
+            +e.H2.title!= pageTitle
+            
+            +e.form-wrpr
+                include ../b-search-form/i
+                
+                
+            
+            
+            if showFilters
+                +e.filters
+                    each filter in filters
+                        +e.A(href="#").filter-link= filter
+                

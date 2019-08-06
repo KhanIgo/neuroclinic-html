@@ -71,7 +71,7 @@ function taskPug(done){
             })
         }))
         .pipe(pug({
-            pretty: true
+            pretty: false
         }))
         .pipe(gulp.dest('build'))
         .pipe(bs.stream());
