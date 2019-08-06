@@ -7,7 +7,7 @@ html(lang='RU-ru')
         
         include components/c-header/c-header
     
-        -let breadcrumbs = ['Курсы'];
+        -let breadcrumbs = ['Мероприятия нейроклиники'];
         include components/c-breadcrumbs/i
         
         -let pageTitle = 'Образовательные программы'
@@ -15,16 +15,10 @@ html(lang='RU-ru')
         -let filters = ['Для кого', 'Специальность', 'Тип программы', 'Календарь']
         
         include blocks/b-courses-header/i
+        
+        -var mod = 'courses'
         include blocks/b-sort-posts/i
         include blocks/b-courses/i
-            
-            //        include components/c-news/c-news
-        
-        
-        
-        //        - var modifier = '_in-index'
-        //        - var show_more_btn = true
-        //        include components/index-videos/index.pug
         
         include components/c-footer/c-footer
         include parts/_footer-scripts

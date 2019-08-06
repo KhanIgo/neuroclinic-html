@@ -1,0 +1,21 @@
+.b-courses {
+    @include d-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include ptb(25);
+    @media (max-width: 1000px) {
+        justify-content: space-around;
+    }
+    
+    &-row{
+        background-color: $cRed3;
+    }
+    &-cnt {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .b-course-item{
+        margin-bottom: 25px;
+    }
+}

@@ -31,13 +31,27 @@ background: linear-gradient(to bottom, rgb(143, 47, 42) 0%, rgb(106, 31, 27) 81%
 @mixin mask-image($img) {
     -webkit-mask-image: url($img);
     mask-image: url($img);
-    mask-size: contain;
-    mask-repeat: no-repeat;
+//    mask-size: contain;
+//    mask-repeat: no-repeat;
 }
 
 @mixin mask($img) {
     @include mask-image($img);
 }
+
+@mixin mask-size($size){
+    -webkit-mask-size: $size;
+    mask-size: $size;
+}
+@mixin mask-position($pos){
+    -webkit-mask-position: $pos;
+    mask-position: $pos;
+}
+@mixin mask-repeat($rep){
+    -webkit-mask-repeat: $rep;
+    mask-repeat: $rep;
+}
+
 
 @mixin flex-with-icon {
     display: -webkit-flex;

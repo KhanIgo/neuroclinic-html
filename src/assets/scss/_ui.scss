@@ -98,6 +98,21 @@ button {
     
 }
 
+
+i{
+    &.tr-down{
+        @include mask('../img/triangle-down.svg');
+        @include mask-size(cover);
+        @include mask-position(center);
+        @include mask-repeat(no-repeat);
+        background-color: currentColor;
+        width: 20px;
+        height: 10px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
 .checkbox-view {
     width: 11px;
     height: 11px;
