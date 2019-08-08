@@ -35,6 +35,13 @@ a{
     &:hover{}
 }
 
+p{
+    margin-bottom: 10px;
+//    text-indent: 1em;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
 span.spacer{
     display: inline-block;
     width: 100%;
@@ -52,6 +59,18 @@ span.spacer{
 .uppercase, .ucase{ text-transform: uppercase; }
 .ta-center{ text-align: center; }
 
+.inherit{
+    text-decoration: none;
+    color: inherit;
+}
+
+.t-section-title{
+    color: $cRed3;
+    margin: 25px auto;
+    &_center{
+        text-align: center;
+    }
+}
 
 .f-code{
     @include f-code;

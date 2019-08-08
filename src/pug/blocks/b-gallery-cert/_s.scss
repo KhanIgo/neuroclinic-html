@@ -1,0 +1,29 @@
+.b-gallery-cert{
+    &-row{
+//        background-color: $greyL;
+        background-color: rgba(250, 250, 250, 1);
+    }
+    &-cnt{
+        padding-bottom: 25px;
+    }
+}
+.b-gallery-cert {
+    @include d-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    
+    &__item {
+        width: 165px;
+        height: 240px;
+        margin-bottom: 20px;
+    }
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__img {
+        @include img-cover;
+    }
+}

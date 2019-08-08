@@ -1,0 +1,8 @@
+.b-courses-down{
+    @include d-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    &-row{}
+    &-cnt{}
+}

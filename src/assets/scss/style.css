@@ -184,6 +184,13 @@ a {
   transition: 350ms; }
 
 /* line 38, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+p {
+  margin-bottom: 10px; }
+  /* line 41, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+  p:last-child {
+    margin-bottom: 0; }
+
+/* line 45, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 span.spacer {
   display: inline-block;
   width: 100%;
@@ -192,259 +199,272 @@ span.spacer {
   color: transparent;
   background: transparent; }
 
-/* line 47, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 54, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .ta-center {
   text-align: center; }
 
-/* line 51, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 58, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .tdn {
   text-decoration: none; }
 
-/* line 52, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 59, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .uppercase, .ucase {
   text-transform: uppercase; }
 
-/* line 53, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 60, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .ta-center {
   text-align: center; }
 
-/* line 56, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 62, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+.inherit {
+  text-decoration: none;
+  color: inherit; }
+
+/* line 67, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+.t-section-title {
+  color: #651e1a;
+  margin: 25px auto; }
+  /* line 70, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+  .t-section-title_center {
+    text-align: center; }
+
+/* line 75, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .f-code {
   font-family: "Code Pro"; }
 
-/* line 59, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 78, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .f-din {
   font-family: "DIN Pro"; }
 
-/* line 63, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 82, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fw-100 {
   font-weight: 100; }
 
-/* line 64, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 83, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fw-200 {
   font-weight: 200; }
 
-/* line 65, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 84, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fw-400 {
   font-weight: 400; }
 
-/* line 66, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 85, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fw-500 {
   font-weight: 500; }
 
-/* line 67, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 86, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fw-600 {
   font-weight: 600; }
 
-/* line 68, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 87, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fw-700 {
   font-weight: 700; }
 
-/* line 69, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 88, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fw-800 {
   font-weight: 800; }
 
-/* line 72, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 91, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-5 {
   font-size: 0.5em; }
 
-/* line 73, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 92, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-55 {
   font-size: 0.55em; }
 
-/* line 74, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 93, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-6 {
   font-size: 0.6em; }
 
-/* line 75, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 94, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-65 {
   font-size: 0.65em; }
 
-/* line 76, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 95, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-7 {
   font-size: 0.7em; }
 
-/* line 77, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 96, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-75 {
   font-size: 0.75em; }
 
-/* line 78, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 97, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-8 {
   font-size: 0.80em; }
 
-/* line 79, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 98, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-85 {
   font-size: 0.85em; }
 
-/* line 80, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 99, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-9 {
   font-size: 0.9em; }
 
-/* line 81, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 100, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_0-95 {
   font-size: 0.95em; }
 
-/* line 83, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 102, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1 {
   font-size: 1em; }
 
-/* line 84, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 103, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-05 {
   font-size: 1.05em; }
 
-/* line 85, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 104, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-1 {
   font-size: 1.1em; }
 
-/* line 86, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 105, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-15 {
   font-size: 1.15em; }
 
-/* line 87, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 106, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-2 {
   font-size: 1.2em; }
 
-/* line 88, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 107, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-25 {
   font-size: 1.25em; }
 
-/* line 89, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 108, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-3 {
   font-size: 1.3em; }
 
-/* line 90, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 109, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-35 {
   font-size: 1.35em; }
 
-/* line 91, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 110, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-4 {
   font-size: 1.4em; }
 
-/* line 92, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 111, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-45 {
   font-size: 1.45em; }
 
-/* line 93, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 112, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-5 {
   font-size: 1.5em; }
 
-/* line 94, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 113, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-55 {
   font-size: 1.55em; }
 
-/* line 95, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 114, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-6 {
   font-size: 1.6em; }
 
-/* line 96, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 115, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-65 {
   font-size: 1.65em; }
 
-/* line 97, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 116, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-7 {
   font-size: 1.7em; }
 
-/* line 98, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 117, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-75 {
   font-size: 1.75em; }
 
-/* line 99, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 118, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-8 {
   font-size: 1.80em; }
 
-/* line 100, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 119, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-85 {
   font-size: 1.85em; }
 
-/* line 101, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 120, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-9 {
   font-size: 1.9em; }
 
-/* line 102, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 121, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_1-95 {
   font-size: 1.95em; }
 
-/* line 103, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 122, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2 {
   font-size: 2em; }
 
-/* line 104, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 123, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-05 {
   font-size: 2.05em; }
 
-/* line 105, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 124, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-1 {
   font-size: 2.1em; }
 
-/* line 106, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 125, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-15 {
   font-size: 2.15em; }
 
-/* line 107, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 126, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-2 {
   font-size: 2.2em; }
 
-/* line 108, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 127, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-25 {
   font-size: 2.25em; }
 
-/* line 109, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 128, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-3 {
   font-size: 2.3em; }
 
-/* line 110, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 129, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-35 {
   font-size: 2.35em; }
 
-/* line 111, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 130, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-4 {
   font-size: 2.4em; }
 
-/* line 112, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 131, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-45 {
   font-size: 2.45em; }
 
-/* line 113, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 132, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-5 {
   font-size: 2.5em; }
 
-/* line 114, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 133, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-55 {
   font-size: 2.55em; }
 
-/* line 115, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 134, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-6 {
   font-size: 2.6em; }
 
-/* line 116, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 135, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-65 {
   font-size: 2.65em; }
 
-/* line 117, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 136, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-7 {
   font-size: 2.7em; }
 
-/* line 118, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 137, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-75 {
   font-size: 2.75em; }
 
-/* line 119, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 138, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-8 {
   font-size: 2.8em; }
 
-/* line 120, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 139, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-85 {
   font-size: 2.85em; }
 
-/* line 121, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 140, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-9 {
   font-size: 2.9em; }
 
-/* line 122, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 141, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_2-95 {
   font-size: 2.95em; }
 
-/* line 123, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
+/* line 142, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_typography.scss */
 .fz_3 {
   font-size: 3em; }
 
@@ -964,6 +984,76 @@ i.tr-down {
   display: flex;
   justify-content: flex-start; }
 
+/* line 4, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-simple/_s.scss */
+.b-simple-cnt {
+  text-align: justify; }
+
+/* line 2, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+.b-single-header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  max-height: 515px;
+  align-items: stretch; }
+  /* line 6, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+  .b-single-header__left {
+    width: calc( 50vw - 480px + 400px);
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white; }
+  /* line 13, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+  .b-single-header__left-cnt {
+    width: 400px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    padding: 35px 15px; }
+  /* line 19, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+  .b-single-header__right {
+    width: calc( 50vw - 480px + 560px);
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden; }
+  /* line 24, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+  .b-single-header__right-cnt {
+    width: 100%;
+    height: 100%; }
+  /* line 28, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+  .b-single-header__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; }
+  /* line 35, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+  .b-single-header-clinic-info {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    /* line 41, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+    .b-single-header-clinic-info__reg-healing {
+      margin-top: 15px;
+      padding-left: 3em;
+      padding-right: 3em; }
+    /* line 47, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-single-header/_s.scss */
+    .b-single-header-clinic-info__reg-appointment {
+      font-size: 1.12em;
+      margin-top: 70px; }
+
 /* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-social/_s.scss */
 .b-social {
   list-style: none;
@@ -996,6 +1086,31 @@ i.tr-down {
     .b-social__link:hover {
       transform: scale(1.15); }
 
+/* line 2, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
+.c-breadcrumbs-row {
+  background-color: #f4f8f6; }
+
+/* line 5, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
+.c-breadcrumbs-cnt {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+
+/* line 10, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
+.c-breadcrumbs {
+  display: flex;
+  list-style: none;
+  color: gray; }
+  /* line 16, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
+  .c-breadcrumbs__link {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: solid 1px currentColor;
+    padding-bottom: 1px; }
+  /* line 22, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
+  .c-breadcrumbs__delimiter {
+    display: inline-block;
+    margin: 0 10px; }
+
 /* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-sort-posts/_s.scss */
 .b-sort-posts {
   display: -webkit-flex;
@@ -1025,31 +1140,6 @@ i.tr-down {
   .b-sort-posts__price-wrpr {
     margin-right: 55px; }
 
-/* line 2, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
-.c-breadcrumbs-row {
-  background-color: #f4f8f6; }
-
-/* line 5, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
-.c-breadcrumbs-cnt {
-  padding-top: 25px;
-  padding-bottom: 25px; }
-
-/* line 10, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
-.c-breadcrumbs {
-  display: flex;
-  list-style: none;
-  color: gray; }
-  /* line 16, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
-  .c-breadcrumbs__link {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: solid 1px currentColor;
-    padding-bottom: 1px; }
-  /* line 22, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-breadcrumbs/_s.scss */
-  .c-breadcrumbs__delimiter {
-    display: inline-block;
-    margin: 0 10px; }
-
 /* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-footer/_s.scss */
 .c-footer {
   background-color: #631c18;
@@ -1076,29 +1166,29 @@ i.tr-down {
     font-size: 1.5em;
     font-weight: 500; }
 
-/* line 2, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
-.header_fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10; }
-
-/* line 9, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 23px;
-  padding-bottom: 23px; }
-
-/* line 16, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
-.header__logo-link {
-  display: block; }
-
-/* line 20, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
-.header__nav {
-  margin-left: auto;
-  margin-right: auto; }
+/* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
+.header {
+  background-color: white; }
+  /* line 3, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
+  .header_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+  /* line 10, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 23px;
+    padding-bottom: 23px; }
+  /* line 17, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
+  .header__logo-link {
+    display: block; }
+  /* line 21, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-header/c-header.scss */
+  .header__nav {
+    margin-left: auto;
+    margin-right: auto; }
 
 /* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/components/c-news/c-news.scss */
 .c-news {
