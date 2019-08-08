@@ -1,0 +1,36 @@
+doctype html
+include parts/_mixins
+html(lang='RU-ru')
+    +head('Курсы')
+    
+    body
+        
+        include components/c-header/c-header
+    
+        -let breadcrumbs = ['Мероприятия нейроклиники'];
+        include components/c-breadcrumbs/i
+        
+        -let isClinic = true
+        -let rightImgSrc = '/images/b-single-header/r-image.jpg'
+        include blocks/b-single-header/i
+        include blocks/b-simple/i
+        include blocks/b-gallery-cert/i
+        include blocks/b-gallery-photo/i
+        include blocks/b-courses-down/i
+        
+        
+        
+        
+        
+        //        -var mod = 'courses'
+        //        include blocks/b-sort-posts/i
+        //        include blocks/b-courses/i
+        
+        include components/c-footer/c-footer
+        include parts/_footer-scripts
+        
+        script.
+            jQuery(function($) {});
+  
+  
+    

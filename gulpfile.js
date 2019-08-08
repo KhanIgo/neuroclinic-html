@@ -10,6 +10,9 @@ const gulp = require('gulp'),
       del = require("del"), 
       rs = require("run-sequence"), 
       vueify = require('gulp-vueify2'),
+      rename = require('gulp-rename'),
+      vueComponent  = require('gulp-vue-single-file-component'),
+      babel = require('gulp-babel'),
       concatFilenames = require('gulp-concat-filenames');
 
 function browserSync(done){
@@ -41,8 +44,6 @@ function taskSassAutoimport(done){
 }
 
 function taskSass(done){
-    
-    
     gulp.src('src/assets/scss/style.scss')
         .pipe(plumber({
             errorHandler: notify.onError(function (err) {
@@ -105,13 +106,25 @@ function taskCopyLibs(done){
     done();
 }
 
-function taskBuildVueComponents(done){
-    gulp.src('src/assets/vueComponents/**/*.vue')
+function taskBuildVue(done){
+//    gulp.src('src/assets/vue/*.js')
+//    .pipe(babel({ plugins: ['@babel/plugin-transform-modules-amd'] }))
+//    .pipe(gulp.dest('./build/assets/vue'))
+//    .pipe(bs.stream());
+//    
+//    gulp.src('src/assets/vue/components/*.vue')
+//    .pipe(vueComponent({ debug: true, loadCssMethod: 'loadCss' }))
+//    .pipe(babel({ plugins: ['@babel/plugin-transform-modules-amd'] }))
+//    .pipe(rename({ extname: '.js' }))
+//    .pipe(gulp.dest('./build/assets/vue'))
+//    .pipe(bs.stream());
+    
+    gulp.src('./src/assets/vue/сomponents/*.vue')
     .pipe(vueify({
         extractCSS: true,
-        CSSOut: "./assets/scss/_vueBundle.scss"
+        CSSOut: "./src/assets/scss/_vue.scss"
     }))
-    .pipe(gulp.dest('./build/assets/js/vueBundle.js'));
+    .pipe(gulp.dest('./build/assets/vue'));
     
     done();
 }
@@ -137,6 +150,7 @@ function taskWatch(done){
     gulp.watch('src/assets/img/**/*.*', gulp.series(taskCopyImages));
     gulp.watch('src/images/**/*.*', gulp.series(taskCopyImages));
     gulp.watch('src/assets/fonts/**/*.*', gulp.series(taskCopyFonts));
+    gulp.watch('src/assets/vue/**/*.vue', gulp.series(taskBuildVue));
 
     done();
 }
@@ -144,9 +158,8 @@ function taskWatch(done){
 
 const copyAssets = gulp.parallel(taskCopyFonts, taskCopyImages, taskCopyLibs, taskCopyJs);
 const watch = gulp.series(taskClean, taskWatch, browserSyncReload);
-const taskDefault = gulp.series(taskClean, gulp.parallel(taskPug, copyAssets, gulp.series(taskSassAutoimport, taskSass)), browserSync, watch);
+const taskDefault = gulp.series(taskClean, gulp.parallel(taskPug, copyAssets, gulp.series(taskBuildVue, taskSassAutoimport, taskSass)), browserSync, watch);
 
 exports.pug = taskPug;
 exports.watch = watch;
 exports.default = taskDefault;
-

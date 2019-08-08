@@ -1,0 +1,13 @@
++b.b-single-header-row.row
+    +b.b-single-header
+        +e.left
+            +e.left-cnt
+                if isClinic
+                    include _info-clinic
+            
+        +e.right
+            +e.right-cnt
+                if rightImgSrc
+                    +e.IMG(src=""+ rightImgSrc).img
+        
+            
