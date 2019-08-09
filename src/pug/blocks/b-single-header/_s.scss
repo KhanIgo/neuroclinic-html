@@ -52,3 +52,16 @@
     
     
 }
+
+.b-single-header-doctor-info {
+    color: $cRed3;
+    &__name {
+        font-size: 1.5em;
+    }
+    &__specs {
+        margin-bottom: 30px;
+    }
+    &__desc {
+        margin-top: 30px;
+    }
+}

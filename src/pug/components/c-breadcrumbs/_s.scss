@@ -12,6 +12,9 @@
     list-style: none;
     color: $breadcrumbsColor;
     &__item {
+        &:last-child{
+            .c-breadcrumbs__delimiter{ display: none; }
+        }
     }
     &__link {
         text-decoration: none;

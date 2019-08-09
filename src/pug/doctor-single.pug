@@ -1,19 +1,19 @@
 doctype html
 include parts/_mixins
 html(lang='RU-ru')
-    +head('Клиника')
+    +head('Врач')
     
     body
         
         include components/c-header/c-header
     
-        -let breadcrumbs = ['Мероприятия нейроклиники'];
+        -let breadcrumbs = ['Клиники', 'Наша клиника'];
         include components/c-breadcrumbs/i
         
-        -let isClinic = true
-        -let rightImgSrc = '/images/b-single-header/r-image.jpg'
+        -let isDoctor = true
+        -let rightImgSrc = '/images/b-single-header/r-image-2.jpg'
         include blocks/b-single-header/i
-        include blocks/b-simple/i
+        //include blocks/b-simple/i
         include blocks/b-gallery-cert/i
         include blocks/b-gallery-photo/i
         include blocks/b-courses-down/i
