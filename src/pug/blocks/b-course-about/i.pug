@@ -1,6 +1,12 @@
 +b.b-course-about-row.row
     +b.b-course-about-cnt.cnt
-        +b.H3.t-section-title_center._c-inherit О программе
+        if !isEvent2
+            +b.H3.t-section-title_center._c-inherit О программе
+        
+        if isEvent2
+        div.m-2-0.ta-center
+            p Здесь дети с родителями могут научиться общаться с животными #[br](гладить их, кормить) и попробовать себя в роли ковбоев, прокатившись #[br]по кругу на лошади в крытом манеже 
+        
         +b.b-course-about
             +e.data
                 +e.data-row

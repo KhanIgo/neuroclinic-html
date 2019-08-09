@@ -66,6 +66,31 @@ body>.row, body>.row-flex{
 .pr0{
     padding-right: 0;
 }
+
+.m-0{
+    @include mtb(0);
+}
+.m-1{
+    margin: 1em;
+}
+.m-2{
+    margin: 2em;
+}
+.m-3{
+    margin: 3em;
+}
+.m-1-0{
+    margin: 1em 0;
+}
+.m-2-0{
+    margin: 2em 0;
+}
+.m-3-0{
+    margin: 3em 0;
+}
+
+
+
 .col-1{width: 8.3333%;}
 .col-2{width: 16.6666%;}
 .col-3{width: 25%;}

@@ -1,5 +1,11 @@
 +b.b-single-header-event-info
-    +e.H2.title Первая #[br]помощь
-    
-    +e.desc
-        p Для родителей
+    if !isEvent2
+        +e.H2.title Первая #[br]помощь
+
+        +e.desc
+            p Для родителей
+    else
+        +e.H2.title Конный клуб #[br]"Арагон"
+
+        +e.desc
+            p Для детей
