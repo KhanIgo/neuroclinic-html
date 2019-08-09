@@ -1,7 +1,7 @@
-+b.b-single-header-row.row
-    +b.b-single-header
-        +e.left
-            +e.left-cnt
++b(class="b-single-header-row_"+modifier).row
+    +b(class="b-single-header_"+modifier)
+        +e(class="left_"+modifier)
+            +e(class="left-cnt_"+modifier)
                 if isClinic
                     include _info-clinic
                 if isDoctor
@@ -9,9 +9,8 @@
                 if isNews
                     include _info-news
                     
-            
-        +e.right
-            +e.right-cnt
+        +e(class="right_"+modifier)
+            +e(class="right-cnt_"+modifier)
                 if rightImgSrc
                     +e.IMG(src=""+ rightImgSrc).img
         

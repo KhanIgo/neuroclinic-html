@@ -9,6 +9,10 @@
         @include d-flex;
         justify-content: flex-end;
         background-color: white;
+        &_single-news{
+            color: white;
+            background-color: $cRed3;
+        }
     }
     &__left-cnt {
         width: 400px;
@@ -63,5 +67,12 @@
     }
     &__desc {
         margin-top: 30px;
+    }
+}
+
+.b-single-header-news-info{
+    &__excerpt{
+        font-weight: 600;
+        font-size: 1.5em;
     }
 }
