@@ -1,0 +1,30 @@
+.b-course-purchase {
+    &-row{
+        background-color: $cPeaches;
+    }
+    &-cnt{
+        padding-bottom: 30px;
+    }
+    
+    
+    &-form {
+        @include d-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &-form__item {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 12px;
+        @include d-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &-form__label {
+        margin-bottom: 7px;
+    }
+    &-form__input {
+        &_submit{
+        }
+    }
+}

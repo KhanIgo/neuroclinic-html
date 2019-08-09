@@ -54,11 +54,10 @@ span.spacer{
 .ta-center{
     text-align: center;
 }
-
+.mt-0{ margin-top: 0 !important; }
 .tdn{ text-decoration: none; }
 .uppercase, .ucase{ text-transform: uppercase; }
 .ta-center{ text-align: center; }
-
 .inherit{
     text-decoration: none;
     color: inherit;
@@ -69,6 +68,9 @@ span.spacer{
     margin: 25px auto;
     &_center{
         text-align: center;
+    }
+    &_c-inherit{
+        color: inherit;
     }
 }
 

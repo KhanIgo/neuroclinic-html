@@ -1,0 +1,29 @@
+doctype html
+include parts/_mixins
+html(lang='RU-ru')
+    +head('Event single')
+    
+    body
+        
+        include components/c-header/c-header
+    
+        -let breadcrumbs = ['На лечение', 'Нейроклиника' ];
+        include components/c-breadcrumbs/i
+        
+        -let modifier = 'single-event'
+        -let isEvent = true
+        -let rightImgSrc = '/images/b-single-header/r-image-4.jpg'
+        include blocks/b-single-header/i
+        
+        include blocks/b-course-about/i
+        include blocks/b-course-purchase/i
+        
+        
+        include blocks/b-courses-down/i
+        
+        include components/c-footer/c-footer
+        include parts/_footer-scripts
+        
+        script.
+            jQuery(function($) {});
+  

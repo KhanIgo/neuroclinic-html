@@ -17,20 +17,20 @@ button {
     }
     &_blue {
         color: white;
-        padding: 0.6em 1.1em;
+        padding: 0.75em 1.1em;
         border-radius: 2em;
         //        border: solid 1px currentColor;
     }
     &_green {
         color: white;
-        padding: 0.6em 1.1em;
+        padding: 0.75em 1.1em;
         border-radius: 2em;
         //        border: solid 1px currentColor;
     }
     &_white {
         background-color: white;
         color: $cRed;
-        padding: 0.6em 1.1em;
+        padding: 0.75em 1.1em;
 //        border-radius: 2em;
         border: solid 1px white;
         &:hover{
@@ -39,7 +39,7 @@ button {
     }
     
     &_bordered {
-        padding: 0.6em 1.1em;
+        padding: 0.75em 1.1em;
         border-radius: 2em;
         border: solid 1px currentColor;
     }
@@ -51,7 +51,7 @@ button {
         @include mask-image('../img/video-btn.svg');
     }
     &_wide {
-        padding: 0.6em 2em;
+        padding: 0.75em 2em;
     }
     &_fw {
         width: 100%;
@@ -59,6 +59,10 @@ button {
     }
     &_c-black{
         color: black;
+    }
+    &_full-width{
+        width: 100%;
+        text-align: center;
     }
   &_del{
     width: 13px;

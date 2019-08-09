@@ -4,10 +4,14 @@
             +e(class="left-cnt_"+modifier)
                 if isClinic
                     include _info-clinic
-                if isDoctor
+                else if isDoctor
                     include _info-doctor
-                if isNews
+                else if isNews
                     include _info-news
+                else if isEvent
+                    include _info-event
+                else 
+                    include _info-common
                     
         +e(class="right_"+modifier)
             +e(class="right-cnt_"+modifier)

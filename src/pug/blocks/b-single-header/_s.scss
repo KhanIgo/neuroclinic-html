@@ -13,6 +13,9 @@
             color: white;
             background-color: $cRed3;
         }
+        &_single-event{
+            background-color: $cPeaches;
+        }
     }
     &__left-cnt {
         width: 400px;
@@ -74,5 +77,11 @@
     &__excerpt{
         font-weight: 600;
         font-size: 1.5em;
+    }
+}
+
+.b-single-header-event-info{
+    &__title{
+        margin-bottom: 30px;
     }
 }
