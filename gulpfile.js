@@ -62,13 +62,12 @@ gulp.task('server', ['scss_concat', 'scss', 'pug', 'libs_autoimport', 'blocks_js
     gulp.watch('src/**/*.scss', ['scss']);
     gulp.watch('src/assets/js/**/*.js', ['copy:js']);
     gulp.watch('src/assets/vue/**/*.js', ['browserify']);
-//    gulp.watch('src/assets/libs/**/*.*', ['copy:libs']);
+    //    gulp.watch('src/assets/libs/**/*.*', ['copy:libs']);
     gulp.watch('src/assets/libs/**/*.*', ['libs_autoimport']);
     gulp.watch('src/pug/**/*.js', ['blocks_js_autoimport']);
     gulp.watch('src/assets/img/**/*.*', ['copy:img']);
     gulp.watch('src/images/**/*.*', ['copy:img']);
     gulp.watch('src/assets/fonts/**/*.*', ['copy:fonts']);
-    
     gulp.watch('src/assets/js/**/*.js').on('change', bs.reload);
 });
 
