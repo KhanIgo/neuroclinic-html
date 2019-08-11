@@ -3,3 +3,6 @@
         +e.IMG(src=""+ authorPhoto).photo
     +e.name
         p!= authorName
+    if authorDesc
+        +e.desc
+            p!= authorDesc

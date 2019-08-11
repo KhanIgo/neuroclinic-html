@@ -20,8 +20,9 @@ jQuery($=>{
         URLhashListener: true,
         autoplay: false,
         autoplayTimeout:4000,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2500,
         autoplayHoverPause: true,
+        animateOut: 'fadeOut',
         navigation: true
     };
     jqCarousel = $('.js-big-slider');    

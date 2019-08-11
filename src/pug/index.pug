@@ -6,22 +6,24 @@ html(lang='RU-ru')
     body
         
         include components/c-header/c-header
-        
         include blocks/b-big-slider/i
         include blocks/b-icon-links/i
-
+        include components/c-edu-programs/c-edu-programs
+        include blocks/b-partners/i
+        include blocks/b-index-author-list/i
+        include blocks/b-index-author-list/i2
         
+        -var titleText = 'Ближайшиие курсы'
+        include blocks/b-course-slider/i
         
-        //        include blocks/b-partners/b-partners
-        //        include components/c-edu-programs/c-edu-programs
-        //        include components/c-events/c-events
-        //        include components/c-news/c-news
+        -var titleText = 'Лекции и семинары для родителей'
+        include blocks/b-course-slider/i
         
-        //        - var modifier = '_in-index'
-        //        - var show_more_btn = true
-        //        include components/index-videos/index.pug
+        -var titleText = 'Программы ЦБТ'
+        include blocks/b-course-slider/i
         
-        include blocks/b-news-down/i
+        include blocks/b-news-slider/i
+        
         include components/c-footer/c-footer
         include parts/_footer-scripts
         
