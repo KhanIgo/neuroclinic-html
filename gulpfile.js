@@ -1,37 +1,79 @@
-"use strict";
+var gulp = require('gulp'),
+    bs = require('browser-sync').create(),
+    sass = require('gulp-sass'),
+    notify = require("gulp-notify"),
+    plumber = require("gulp-plumber"),
+    sourcemaps = require("gulp-sourcemaps"),
+    pug = require("gulp-pug"),
+    del = require("del"),
+    rs = require("run-sequence"),
+    concatFilenames = require('gulp-concat-filenames'),
+    concat = require('gulp-concat'),
+    //    browserify = require('gulp-browserify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    browserify = require('browserify'),
+    babelify = require('babelify');
 
-const gulp = require('gulp'), 
-      bs = require('browser-sync').create(), 
-      sass = require('gulp-sass'), 
-      notify = require("gulp-notify"), 
-      plumber = require("gulp-plumber"), 
-      sourcemaps = require("gulp-sourcemaps"), 
-      pug = require("gulp-pug"), 
-      del = require("del"), 
-      rs = require("run-sequence"), 
-      vueify = require('gulp-vueify2'),
-      rename = require('gulp-rename'),
-      vueComponent  = require('gulp-vue-single-file-component'),
-      babel = require('gulp-babel'),
-      concatFilenames = require('gulp-concat-filenames');
+//var vueify = require('gulp-vueify2');
+var vueify = require('gulp-vueify2');
 
-function browserSync(done){
+gulp.task('browserify', function () {
+//      return browserify('./src/assets/vue/app.js')
+//      .bundle()
+//      .pipe(source('bundle.js'))
+//      .pipe(gulp.dest('./build/assets/js/'));
+
+
+});
+
+gulp.task('taskVue', function (cb) {
+    // set up the browserify instance on a task basis
+    var b = browserify({
+        entries: './entry.js',
+        debug: true,
+        // defining transforms here will avoid crashing your stream
+        transform: [vueify]
+    });
+
+    return b.bundle()
+        .pipe(source('./src/assets/vue/app.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({
+            loadMaps: true
+        }))
+        // Add transformation tasks to the pipeline here.
+        .pipe(uglify())
+        .on('error', log.error)
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./build/assets/vue/'));
+
+    cb();
+});
+
+gulp.task('server', ['scss_concat', 'scss', 'pug', 'libs_autoimport', 'blocks_js_autoimport', 'browserify', 'copy:js', 'copy:img', 'copy:fonts'], function () {
     bs.init({
         server: {
             baseDir: 'build/'
         }
     });
-    done();
-}
 
-// BrowserSync Reload
-function browserSyncReload(done) {
-  bs.reload();
-  done();
-}
+    gulp.watch('src/pug/**/*.*', ['pug']);
+    gulp.watch('src/**/*.scss', ['scss']);
+    gulp.watch('src/assets/js/**/*.js', ['copy:js']);
+    gulp.watch('src/assets/vue/**/*.js', ['browserify']);
+//    gulp.watch('src/assets/libs/**/*.*', ['copy:libs']);
+    gulp.watch('src/assets/libs/**/*.*', ['libs_autoimport']);
+    gulp.watch('src/pug/**/*.js', ['blocks_js_autoimport']);
+    gulp.watch('src/assets/img/**/*.*', ['copy:img']);
+    gulp.watch('src/images/**/*.*', ['copy:img']);
+    gulp.watch('src/assets/fonts/**/*.*', ['copy:fonts']);
+    
+    gulp.watch('src/assets/js/**/*.js').on('change', bs.reload);
+});
 
-function taskSassAutoimport(done){
-    const concatFilenamesOptions = {
+gulp.task('scss_concat', function (cb) {
+    let concatFilenamesOptions = {
         root: './src/pug/',
         prepend: "@import './../../pug/",
         append: "';"
@@ -40,11 +82,36 @@ function taskSassAutoimport(done){
     gulp.src('./src/pug/**/*.scss')
         .pipe(concatFilenames('_autoimport.scss', concatFilenamesOptions))
         .pipe(gulp.dest('./src/assets/scss'));
-    done();
-}
 
-function taskSass(done){
-    gulp.src('src/assets/scss/style.scss')
+    cb();
+});
+
+gulp.task('libs_autoimport', function (cb) {
+    gulp.src('./src/assets/libs/**/*.js')
+    .pipe(concat('libsBundle.js'))
+    .pipe(gulp.dest('./build/assets/js/'));
+    
+    gulp.src('./src/assets/libs/**/*.css')
+    .pipe(concat('libsBundle.css'))
+    .pipe(gulp.dest('./build/assets/css/'));
+
+    cb();
+});
+
+
+gulp.task('blocks_js_autoimport', function (cb) {
+    gulp.src('./src/pug/**/*.js')
+    .pipe(concat('blocks.js'))
+    .pipe(gulp.dest('./build/assets/js/'));
+    
+    cb();
+});
+
+
+
+
+gulp.task('scss', function () {
+    return gulp.src('src/assets/scss/style.scss')
         .pipe(plumber({
             errorHandler: notify.onError(function (err) {
                 return {
@@ -58,11 +125,9 @@ function taskSass(done){
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/assets/css'))
         .pipe(bs.stream());
-    done();
-}
-
-function taskPug(done){
-    gulp.src('src/pug/*.pug')
+});
+gulp.task('pug', function () {
+    return gulp.src('src/pug/*.pug')
         .pipe(plumber({
             errorHandler: notify.onError(function (err) {
                 return {
@@ -72,22 +137,23 @@ function taskPug(done){
             })
         }))
         .pipe(pug({
-            pretty: false
+            pretty: true
         }))
         .pipe(gulp.dest('build'))
         .pipe(bs.stream());
-    done();
-}
-
-function taskCopyFonts (done){
-    gulp.src('src/assets/fonts/**/*.*')
-        .pipe(gulp.dest('build/assets/fonts'))
+});
+gulp.task('copy:js', function () {
+    return gulp.src('src/assets/js/**/*.*')
+        .pipe(gulp.dest('build/assets/js'))
         .pipe(bs.stream());
-    
-    done();
-}
 
-function taskCopyImages(done){
+});
+gulp.task('copy:libs', function () {
+    return gulp.src('src/assets/libs/**/*.*')
+        .pipe(gulp.dest('build/assets/libs'))
+        .pipe(bs.stream());
+});
+gulp.task('copy:img', function () {
     gulp.src('src/assets/img/**/*.*')
         .pipe(gulp.dest('build/assets/img'))
         .pipe(bs.stream());
@@ -95,71 +161,19 @@ function taskCopyImages(done){
     gulp.src('src/images/**/*.*')
         .pipe(gulp.dest('build/images'))
         .pipe(bs.stream());
-    
-    done();
-}
-
-function taskCopyLibs(done){
-    gulp.src('src/assets/libs/**/*.*')
-        .pipe(gulp.dest('build/assets/libs'))
+});
+gulp.task('copy:fonts', function () {
+    return gulp.src('src/assets/fonts/**/*.*')
+        .pipe(gulp.dest('build/assets/fonts'))
         .pipe(bs.stream());
-    done();
-}
-
-function taskBuildVue(done){
-//    gulp.src('src/assets/vue/*.js')
-//    .pipe(babel({ plugins: ['@babel/plugin-transform-modules-amd'] }))
-//    .pipe(gulp.dest('./build/assets/vue'))
-//    .pipe(bs.stream());
-//    
-//    gulp.src('src/assets/vue/components/*.vue')
-//    .pipe(vueComponent({ debug: true, loadCssMethod: 'loadCss' }))
-//    .pipe(babel({ plugins: ['@babel/plugin-transform-modules-amd'] }))
-//    .pipe(rename({ extname: '.js' }))
-//    .pipe(gulp.dest('./build/assets/vue'))
-//    .pipe(bs.stream());
-    
-    gulp.src('./src/assets/vue/сomponents/*.vue')
-    .pipe(vueify({
-        extractCSS: true,
-        CSSOut: "./src/assets/scss/_vue.scss"
-    }))
-    .pipe(gulp.dest('./build/assets/vue'));
-    
-    done();
-}
-
-
-
-function taskCopyJs(done){
-    gulp.src('src/assets/js/**/*.*')
-        .pipe(gulp.dest('build/assets/js'))
-        .pipe(bs.stream());
-    done();
-}
-
-function taskClean(){
-    return del('./build');
-}
-
-function taskWatch(done){
-    gulp.watch('src/pug/**/*.*', gulp.series(taskPug));
-    gulp.watch('src/**/*.scss', gulp.series(taskSass));
-    gulp.watch('src/assets/js/**/*.js', gulp.series(taskCopyJs));
-    gulp.watch('src/assets/libs/**/*.*', gulp.series(taskCopyLibs));
-    gulp.watch('src/assets/img/**/*.*', gulp.series(taskCopyImages));
-    gulp.watch('src/images/**/*.*', gulp.series(taskCopyImages));
-    gulp.watch('src/assets/fonts/**/*.*', gulp.series(taskCopyFonts));
-    gulp.watch('src/assets/vue/**/*.vue', gulp.series(taskBuildVue));
-
-    done();
-}
-
-
-const copyAssets = gulp.parallel(taskCopyFonts, taskCopyImages, taskCopyLibs, taskCopyJs);
-const watch = gulp.series(taskClean, taskWatch, browserSyncReload);
-const taskDefault = gulp.series(taskClean, gulp.parallel(taskPug, copyAssets, gulp.series(taskBuildVue, taskSassAutoimport, taskSass)), browserSync, watch);
-
-exports.pug = taskPug;
-exports.watch = watch;
-exports.default = taskDefault;
+});
+gulp.task('clean:build', function () {
+    return del('build');
+});
+gulp.task('default', function (callback) {
+    rs(
+        'clean:build',
+        'server',
+        callback
+    );
+});
