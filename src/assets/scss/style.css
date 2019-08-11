@@ -546,6 +546,9 @@ button {
     border-radius: 2em;
     border: solid 1px currentColor; }
   /* line 46, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  .btn_brd-white {
+    border: solid 1px white; }
+  /* line 49, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .btn_video {
     display: block;
     width: 53px;
@@ -553,21 +556,21 @@ button {
     background-color: white;
     -webkit-mask-image: url("../img/video-btn.svg");
     mask-image: url("../img/video-btn.svg"); }
-  /* line 53, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 56, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .btn_wide {
     padding: 0.75em 2em; }
-  /* line 56, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 59, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .btn_fw {
     width: 100%;
     text-align: center; }
-  /* line 60, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 63, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .btn_c-black {
     color: black; }
-  /* line 63, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 66, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .btn_full-width {
     width: 100%;
     text-align: center; }
-  /* line 67, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 70, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .btn_del {
     width: 13px;
     height: 14px;
@@ -575,33 +578,33 @@ button {
     background-color: currentColor;
     -webkit-mask-image: url("../img/icon-cart-del.svg");
     mask-image: url("../img/icon-cart-del.svg"); }
-    /* line 73, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+    /* line 76, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
     .btn_del:hover {
       color: red; }
 
-/* line 79, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+/* line 82, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
 .input {
   font-size: 1em;
   padding: 0.75em 1.5em;
   outline: 0; }
-  /* line 84, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 87, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .input_type-text {
     border: solid 1px #792621; }
-  /* line 87, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 90, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .input_i-white {
     outline: none;
     background-color: transparent;
     border: solid 1px white;
     border-radius: 2em;
     padding: 0.6em 2.25em; }
-  /* line 94, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 97, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .input_grey-border {
     border-color: #d1d1d1; }
-  /* line 97, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 100, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .input_wide {
     width: 100%; }
 
-/* line 107, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+/* line 110, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
 i.tr-down {
   -webkit-mask-image: url("../img/triangle-down.svg");
   mask-image: url("../img/triangle-down.svg");
@@ -617,20 +620,20 @@ i.tr-down {
   display: inline-block;
   margin-right: 5px; }
 
-/* line 120, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+/* line 123, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
 .checkbox-view {
   width: 11px;
   height: 11px;
   position: relative;
   flex: 0,0,auto; }
-  /* line 125, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 128, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .checkbox-view__input {
     width: 12px;
     height: 12px;
     position: relative;
     z-index: 2;
     opacity: 0; }
-    /* line 131, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+    /* line 134, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
     .checkbox-view__input + span.checkbox-view__span {
       display: inline-block;
       width: 11px;
@@ -641,7 +644,7 @@ i.tr-down {
       z-index: 1;
       left: 0;
       top: 0; }
-      /* line 141, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+      /* line 144, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
       .checkbox-view__input + span.checkbox-view__span:before {
         content: '';
         display: block;
@@ -655,17 +658,17 @@ i.tr-down {
         mask-size: contain;
         opacity: 0;
         transition: 300ms; }
-    /* line 156, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+    /* line 159, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
     .checkbox-view__input:checked + span.checkbox-view__span:before {
       opacity: 1; }
 
-/* line 164, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+/* line 167, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
 .phone-link {
   display: flex;
   align-items: center;
   color: white;
   text-decoration: none; }
-  /* line 169, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
+  /* line 172, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/assets/scss/_ui.scss */
   .phone-link i {
     display: inline-block;
     width: 32px;
@@ -840,6 +843,16 @@ i.tr-down {
     object-fit: contain;
     object-position: center; }
 
+/* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-cnt-title-and-btn/_s.scss */
+.b-cnt-title-and-btn-cnt {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
 /* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-course-about/_s.scss */
 .b-course-about {
   display: -webkit-flex;
@@ -988,6 +1001,16 @@ i.tr-down {
 /* line 23, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-course-purchase/_s.scss */
 .b-course-purchase-form__label {
   margin-bottom: 7px; }
+
+/* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-course-slider/_s.scss */
+.b-course-slider {
+  position: relative;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 10, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-course-slider/_s.scss */
+  .b-course-slider .owl-item {
+    float: left; }
 
 /* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-courses/_s.scss */
 .b-courses {
@@ -1173,22 +1196,16 @@ i.tr-down {
     font-size: 1.5em;
     font-weight: 500;
     border-left: solid 1px white;
-    padding: 35px 10px; }
-    /* line 29, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
+    padding: 35px 10px;
+    width: 240px;
+    flex-shrink: 0;
+    flex-grow: 0; }
+    /* line 32, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
     .b-icon-links__item:first-child {
       border-left: 0; }
-    /* line 35, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
-    .b-icon-links__item_i-1 {
-      width: 180px; }
-    /* line 39, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
+    /* line 41, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
     .b-icon-links__item_i-2 {
-      width: 280px; }
-    /* line 43, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
-    .b-icon-links__item_i-3 {
-      width: 240px; }
-    /* line 47, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
-    .b-icon-links__item_i-4 {
-      width: 240px; }
+      width: 260px; }
   /* line 53, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
   .b-icon-links__icon {
     display: block;
@@ -1221,7 +1238,13 @@ i.tr-down {
       mask-image: url("../img/b-icon-links/i-4.svg"); }
   /* line 81, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-icon-links/_s.scss */
   .b-icon-links__text {
-    text-align: center; }
+    text-align: center;
+    max-width: 180px; }
+
+/* line 2, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-index-author-list/_s.scss */
+.b-index-author-list-row {
+  background-color: #651e1a;
+  color: white; }
 
 /* line 3, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-nav/b-nav.scss */
 .b-nav-list {
@@ -1304,6 +1327,16 @@ i.tr-down {
     font-weight: 500;
     letter-spacing: 0.02em; }
 
+/* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-news-slider/_s.scss */
+.b-news-slider {
+  position: relative;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 10, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-news-slider/_s.scss */
+  .b-news-slider .owl-item {
+    float: left; }
+
 /* line 4, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-page-header/_s.scss */
 .b-page-header-cnt {
   padding-top: 25px;
@@ -1320,21 +1353,37 @@ i.tr-down {
     margin-top: 10px;
     font-size: 1.5em; }
 
-/* line 2, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
+/* line 3, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
+.b-partners-cnt {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+/* line 8, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
 .b-partners__title {
+  color: inherit;
   text-align: center; }
 
-/* line 5, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
+/* line 12, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
 .b-partners__desc {
-  text-align: center; }
+  text-align: center;
+  max-width: 850px;
+  font-size: 1.5em;
+  margin-top: -5px;
+  margin-left: auto;
+  margin-right: auto; }
 
-/* line 9, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
+/* line 20, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
 .b-partners__btn-wrpr {
-  text-align: center; }
+  text-align: center;
+  margin-top: 70px;
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto; }
 
-/* line 15, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
+/* line 29, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-partners/_s.scss */
 .b-partners .b-clinic-logo-row {
-  background-color: transparent; }
+  background-color: transparent;
+  margin-top: 85px; }
 
 /* line 1, /Users/khanigo/Documents/Документы работа/Нейроклиника/neuroclinic-html/src/pug/blocks/b-search-form/_s.scss */
 .b-search-form {

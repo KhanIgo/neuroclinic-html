@@ -15,12 +15,17 @@
     &__photo {
         @include img-cover;
     }
-    &__name {
+    &__name-desc {
         flex-grow: 1;
         color: white;
-        font-weight: 600;
-        font-size: 1.12em;
         margin-left: 10px;
         line-height: 1em;
+        @include d-flex;
+        flex-direction: column;
+    }
+    &__name{
+        font-weight: 600;
+        font-size: 1.12em;
+        line-height: 120%;
     }
 }

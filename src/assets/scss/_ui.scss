@@ -43,6 +43,9 @@ button {
         border-radius: 2em;
         border: solid 1px currentColor;
     }
+    &_brd-white{
+        border: solid 1px white;
+    }
     &_video {
         display: block;
         width: 53px;
