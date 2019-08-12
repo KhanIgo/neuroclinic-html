@@ -1,7 +1,6 @@
 .b-edu-slider {
     position: relative;
     width: 940px;
-    margin-top: 35px;
     
     float: left;   
     @media (min-width: 960px) {
@@ -31,8 +30,7 @@
     
     &-row{
         background-color: $cRed3;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        overflow: hidden;
         .b-cnt-title-and-btn-cnt{
             color: white;
         }
