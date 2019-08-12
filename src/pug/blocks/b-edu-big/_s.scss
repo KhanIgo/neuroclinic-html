@@ -1,0 +1,26 @@
+.b-edu-big {
+    
+    @include d-flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    max-width: 940px;
+    min-height: 350px;
+    color: $cRed3;
+    padding: 20px 25px;
+    text-decoration: none;
+    
+    &__for {
+        font-size: 1.12em;
+    }
+    &__title {
+            font-size: 1.85em;
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-weight: 600;
+    }
+    &__desc {
+        font-size: 1.12em;
+    }
+}

@@ -80,6 +80,7 @@ jQuery(($) => {
     carousel = $jqCarousel.owlCarousel(owlConfig);
 
 });
+
 jQuery(($) => {
     let owlConfig,
         $jqCarousel,
