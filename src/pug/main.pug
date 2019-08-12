@@ -1,0 +1,34 @@
+doctype html
+include parts/_mixins
+html(lang='RU-ru')
+    +head('Главная')
+    
+    body
+        
+        include components/c-header/c-header
+        include blocks/b-big-slider/i
+        include blocks/b-icon-links/i
+        include components/c-edu-programs/c-edu-programs
+        include blocks/b-partners/i
+        include blocks/b-index-author-list/i
+        include blocks/b-index-author-list/i2
+        
+        -var titleText = 'Ближайшие курсы'
+        include blocks/b-course-slider/i
+        
+        -var titleText = 'Лекции и семинары для родителей'
+        include blocks/b-course-slider/i
+        
+        -var titleText = 'Программы ЦБТ'
+        include blocks/b-course-slider/i
+        
+        include blocks/b-news-slider/i
+        
+        include components/c-footer/c-footer
+        include parts/_footer-scripts
+        
+        script.
+            jQuery(function($) {});
+  
+  
+    
