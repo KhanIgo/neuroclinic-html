@@ -1,7 +1,10 @@
 +b.b-news-item
-    +e.img-wrpr
-        if itemImgSrc
+    if itemImgSrc
+        +e.img-wrpr_has-img
             +e.IMG(src=""+ itemImgSrc).img
+    else
+        +e.img-wrpr_has-no-img
+            
     +e.info
         +e.date
             p!= itemDate 

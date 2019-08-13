@@ -1,12 +1,20 @@
 +b.b-course-item
     +e.img-author-desc
-        +e.img-wrpr
-            if itemImg 
+        if itemImg 
+            +e.img-wrpr_has-img
                 +e.IMG(src=""+ itemImg).img
+        else
+            +e.img-wrpr_has-no-img
+        
         
         include ./../b-author/i
-        +e.desc
-            p!= itemDesc
+        
+        if itemImg 
+            +e.A(href="/event.html").desc
+                p!= itemDesc
+        else
+            +e.A(href="/event2.html").desc
+                p!= itemDesc
             
     +e.info
         +e.info-item

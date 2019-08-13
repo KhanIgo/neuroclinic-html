@@ -18,10 +18,16 @@
         z-index: -1;
         left: 0;
         top: 0;
-        @include grad;
         
+        &_has-img{
+            background: #333;
+        }
+        &_has-no-img{
+            @include grad;
+        }
     }
     &__img {
+        opacity: 0.6;
         @include img-cover;
     }
     
@@ -30,6 +36,7 @@
         color: white;
         font-weight: 600;
         font-size: 1.12em;
+        text-decoration: none;
     }
     &__info {
         @include d-flex;

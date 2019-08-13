@@ -90,7 +90,7 @@ background: linear-gradient(to bottom, rgb(143, 47, 42) 0%, rgb(106, 31, 27) 81%
 @mixin img-cover{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
