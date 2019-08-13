@@ -16,6 +16,8 @@
         background-repeat: no-repeat;
         background-position: 0 0;
         background-size: auto;
+        opacity: 0.4;
+        transform: 350ms;
         &_fb{
             background-position: -34px 0;
         }
@@ -26,7 +28,7 @@
             background-position: -104px 0;
         }
         &:hover{
-            transform: scale(1.15);
+            opacity: 1;
         }
         
     }

@@ -128,3 +128,4 @@ jQuery(($) => {
     carousel = $jqCarousel.owlCarousel(owlConfig);
 
 });
+
