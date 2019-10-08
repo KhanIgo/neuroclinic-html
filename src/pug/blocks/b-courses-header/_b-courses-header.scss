@@ -1,0 +1,76 @@
+.b-courses-header {
+    @include ptb(30);
+    &-row{
+        background-color: rgba(250, 185, 157, 1);
+    }
+    &__title {
+        text-align: center;
+        color: $cRed;
+    }
+    &__form-wrpr {
+        max-width: 780px;
+        @include to-center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .b-search-form__input{
+            flex-grow: 1;
+        }
+        .b-search-form__submit{
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+    }
+    &__filters {
+        max-width: 640px;
+        @include to-center;
+        @include d-flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: 650px) {
+            justify-content: space-around;
+        }
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+        
+    }
+    
+    &__filter{
+        position: relative;
+        &:hover{
+            ul{
+                visibility: visible;
+                height: auto;
+            }
+        }
+    }
+    
+    &__filter-list-items{
+        position: absolute;
+        list-style: none;
+        width: 100%;
+        margin-top: 6px;
+        @include d-flex;
+        visibility: hidden;
+//        flex-direction: column;
+//        padding: 7px;
+//        background: rgba(255, 255, 255, 0.2);
+        
+        @media (min-width: 900px) {
+            flex-wrap: nowrap;
+        }
+        @media (max-width: 500px){
+            position: relative;
+            height: 0px;
+            overflow: hidden;
+        }
+        li{
+            margin-right: 15px;
+        }
+    }
+    a {
+        color: inherit;
+        text-decoration: none;    
+        white-space: nowrap;
+    }
+}

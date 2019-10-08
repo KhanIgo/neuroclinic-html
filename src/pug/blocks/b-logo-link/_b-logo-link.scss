@@ -1,0 +1,26 @@
+.b-logo-link{
+    display: block;
+    width: 125px;
+    height: 25px;
+    background-color: #333333;
+    
+    @include mask('../img/b-logo-link/logo.svg');
+    @include mask-repeat(no-repeat);
+    @include mask-size(contain);
+    @include mask-position(left center);
+    
+    &_lg{
+        @media (max-width: 1151px) {
+            display: none;
+        }
+    }
+    &_md{
+        position: fixed;
+        top: 25px;
+        left: 15px;
+        z-index: 20;
+        @media (min-width: 1150px) {
+            display: none;
+        }
+    }
+}

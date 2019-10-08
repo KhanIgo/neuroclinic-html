@@ -1,0 +1,62 @@
+.b-header-search {
+    position: absolute;
+    background: white;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    overflow: hidden;
+    
+    transition: 350ms ease-in-out;
+    
+    &_lg{
+        top: 10px;
+        right: 65px;
+        max-width: 0;
+    }
+    &_md{
+        display: block;
+        max-height: 150px;
+        top: 0;
+        @media (min-width: 1151px){
+            display: none;
+        }
+        @media (max-width: 1500px){
+            position: relative;
+            overflow: visible;
+            margin: 10px 0;
+        }
+        @media (max-width: 900px){
+            margin: 30px 0;
+        }
+    }
+    
+    
+    
+    &_visible{
+        max-width: 650px;
+    }
+    
+    
+    &__form-wrpr{
+        width: 100%;
+        padding: 10px;
+        @media (max-width: 900px){
+            padding: 10px 0;
+        }
+    }
+    &__form{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        @media (max-width: 500px) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+    &__input{
+        flex-grow: 1;
+    }
+}

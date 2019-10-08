@@ -141,11 +141,11 @@ gulp.task('pug', function () {
         .pipe(gulp.dest('build'))
         .pipe(bs.stream());
 });
+
 gulp.task('copy:js', function () {
     return gulp.src('src/assets/js/**/*.*')
         .pipe(gulp.dest('build/assets/js'))
         .pipe(bs.stream());
-
 });
 gulp.task('copy:libs', function () {
     return gulp.src('src/assets/libs/**/*.*')

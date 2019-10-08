@@ -8,12 +8,17 @@ button {
 .btn {
     text-decoration: none;
     display: inline-block;
+    position: relative;
+    z-index: 2;
 //    text-transform: uppercase;
     padding: 0.75em 1.5em;
+    overflow: hidden;
     &_red{
         color: white;
         background-color: $cRed;
         border: solid 1px $cRed;
+        
+        @include white-hover;
     }
     &_blue {
         color: white;
@@ -45,6 +50,12 @@ button {
     }
     &_brd-white{
         border: solid 1px white;
+    }
+    &_brd-red{
+        color: $cRed;
+        border: solid 1px $cRed;
+        
+        @include red-hover;
     }
     &_video {
         display: block;
@@ -87,6 +98,11 @@ button {
     &_type-text {
         border: solid 1px $cRedBorder;
     }
+    &_type-textarea{
+        resize: none;
+        height: 125px;
+        overflow: hidden;
+    }
     &_i-white {
         outline: none;
         background-color: transparent;
@@ -97,12 +113,23 @@ button {
     &_grey-border{
         border-color: rgba(209, 209, 209, 1);
     }
+    &_date{
+        background-image: url('../img/icon-calendar.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) calc(50%);
+    }
     &_wide {
         width: 100%;
     }
     &_checkbox {}
     
-    
+    &.validation-failed{
+        border-color: red !important;
+        background-image: url('../img/error.svg');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 9px) center;
+        background-size: 16px 16px;
+    }
 }
 
 
@@ -117,6 +144,7 @@ i{
         height: 10px;
         display: inline-block;
         margin-right: 5px;
+        
     }
 }
 
@@ -179,3 +207,122 @@ i{
         margin-right: 0.3em;
     }
 }
+
+
+.ui{
+    &-accordeon{
+        margin-bottom: 7px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &__head{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            text-decoration: none;
+            color: inherit;
+            font-weight: 400;
+            font-size: 1.25em;
+            justify-content: space-between;
+        }
+        
+        &__toggle-icon{
+            display: block;
+            width: 20px;
+            height: 20px;
+            @include mask('../img/plus.svg');
+            @include mask-size('contain');
+            @include mask-position('center');
+            @include mask-repeat('no-repeat');
+            background-color: $cRed3;
+            margin-left: 15px;
+            transition: 350ms ease-in-out;
+            &_is-active{
+                transform: rotate(45deg);
+            }
+            
+        }
+        &__content{
+            overflow: hidden;
+//            max-height: 0px;
+            height: 0;
+            
+            &_is-active{
+            }
+            
+            &-inner{
+                padding: 15px;
+            }
+        }
+    }
+}
+
+
+
+
+.bx-controls-direction{
+    a{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 63px;
+//        background: rgba(0,0,0, 0.4);
+        color: transparent;
+        background-color: transparent;
+        z-index: 55;
+        @media (max-width: 1100px){
+            width: 45px;
+        }
+        @media (max-width: 900px){
+            width: 30px;
+        }
+        &:before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 66px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('../img/owl-slider-arrow.png');
+            background-color: rgba(250, 185, 157, 0.15);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    .bx-prev{
+        left: calc( 50vw - 480px - 85px );
+        @media (max-width: 1100px) {
+            left: 0;
+        }
+//        left: 0;
+        
+        
+    }
+    .bx-next{
+        right: calc( 50vw - 480px - 85px );
+        @media (max-width: 1100px) {
+            right: 0px;
+        }
+        &:before{ transform: translateY(-50%) rotate(180deg); }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .owl-stage{
+        display: -webkit-flex !important;
+        display: -moz-flex !important;
+        display: -ms-flex !important;
+        display: -o-flex !important;
+        display: flex !important;
+        align-items: stretch;
+    }
+    .b-big-slider-item{
+        height: 100%;
+    }
+}
+

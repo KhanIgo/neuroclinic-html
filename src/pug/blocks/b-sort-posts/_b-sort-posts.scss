@@ -1,0 +1,49 @@
+.b-sort-posts {
+    @include d-flex;
+    @include ptb(40);
+    color: $greyL;
+    
+    a{
+        color: inherit;
+        text-decoration: none;    
+        
+        &.is-active_no{
+            i{ display: none; }
+        }
+        
+        &.direction-asc{
+            i{}
+        }
+        &.direction-desc{
+            i{ transform: rotate(180deg); }
+        }
+    }
+    &-row{
+        &_courses{
+            background-color: $cRed3;
+        }
+    }
+    &-cnt{
+        @include d-flex;
+        justify-content: flex-end;
+    }
+    
+    &__price-wrpr {
+        margin-right: 55px;
+    }
+    &__price {
+    }
+    &__time-wrpr {
+    }
+    &__time {
+    }
+    
+    
+    i{
+        
+    }
+}
+
+
+
+//

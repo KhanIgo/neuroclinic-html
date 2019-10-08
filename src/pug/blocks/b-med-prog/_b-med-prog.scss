@@ -1,0 +1,33 @@
+.b-med-prog{
+    position: relative;
+    z-index: 2;
+    background-color: inherit;
+    &-row{}
+    &-cnt{
+        padding-top: 45px;
+        padding-bottom: 25px;
+    }
+    &__title{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &__title-h{
+        color: $cRed3;
+        text-align: center;
+    }
+    &__text{
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    .b-cnt-title-and-btn-cnt{
+        margin-top: 45px;
+    }
+    
+    .b-cnt-title-and-btn-cnt__title{
+        color: $cRed3;
+        &_2{
+            float: left;
+        }
+    }
+}

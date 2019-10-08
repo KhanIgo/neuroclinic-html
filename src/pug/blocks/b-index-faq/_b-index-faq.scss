@@ -1,0 +1,19 @@
+.b-index-faq{
+    position: relative;
+    z-index: 2;
+    background-color: inherit;
+    padding: 35px 0 0;
+    &-cnt{
+        padding-bottom: 35px;
+    }
+    &__title{
+        text-align: center;
+        color: $cRed3;
+        margin-bottom: 20px;
+    }
+    
+    &__btn-wrpr{
+        text-align: center;
+        margin-top: 50px;
+    }
+}

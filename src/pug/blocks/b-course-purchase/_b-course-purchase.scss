@@ -1,0 +1,114 @@
+.b-course-purchase {
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+    
+    &-row{
+        background-color: $cPeaches;
+        &_question{
+            padding-top: 25px;
+        }
+    }
+    &-cnt{
+        padding-bottom: 30px;
+    }
+    
+    
+    &-form {
+        @include d-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &-form__item {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 12px;
+        @include d-flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+        &_col-1-2{
+            width: 45%;
+            max-width: 500px;
+        }
+        &_col-1-1{
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        &_hidden{
+            display: none !important;
+        }
+    }
+    &-form__label {
+        margin-bottom: 7px;
+    }
+    &-form__input {
+        &_submit{
+        }
+    }
+    
+    &__loader, &__on-complete, &__on-error{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.55);
+        left: 0;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 200ms ease-in-out;
+        &.active{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
+    &__loader{
+        z-index: 10;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            @include mask('../img/loader.svg');
+            background-color: $cRed3;
+            -webkit-animation: spin 1s ease-in-out infinite;
+            animation: spin 1s ease-in-out infinite;
+            
+        }
+    }
+    &__on-complete, &__on-error{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.75);
+        font-size: 1.2em;
+    }
+    &__on-complete{
+        z-index: 11;
+    }
+    &__on-error{
+        z-index: 12;
+        background-color:  transparentize($cRed3, 0.1);
+        color: white;
+    }
+    &__on-complete-message, &__on-error-message{
+        margin: 15px;
+        text-align: center;
+        max-width: 550px;
+    }
+    
+    &__on-error{}
+    
+    .ajax-loader, .wpcf7-response-output{
+        display: none !important;
+    }
+}

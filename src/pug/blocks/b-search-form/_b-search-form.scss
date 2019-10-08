@@ -1,0 +1,13 @@
+.b-search-form {
+    &__input {
+    }
+    &__submit {
+    }
+    
+    
+    @include d-flex;
+    justify-content: flex-start;
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
+}

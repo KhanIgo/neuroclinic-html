@@ -1,0 +1,49 @@
+.b-social {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    &_lg{
+        @media (max-width: 1150px) {
+            display: none;
+        }
+    }
+    &_md{
+        justify-content: flex-end;
+        margin-bottom: 15px;
+    }
+    &__item {
+        margin: 0 4px;
+    }
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        color: transparent;
+        width: 26px;
+        height: 25px;
+        background-image: url(../img/b-social/icons-2.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: auto;
+        opacity: 0.4;
+//        transform: 350ms;
+        transition: 350ms ease-in-out;
+        &:hover{
+            opacity: 1;
+            transform: scale(1.15);
+        }
+        
+        &_fb{
+            background-position: -34px 0;
+        }
+        &_youtube{
+            background-position: -69px 0;
+        }
+        &_insta{
+            background-position: -104px 0;
+        }
+        &:hover{
+            opacity: 1;
+        }
+        
+    }
+}

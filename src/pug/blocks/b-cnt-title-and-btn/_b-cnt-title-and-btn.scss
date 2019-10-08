@@ -1,0 +1,26 @@
+.b-cnt-title-and-btn-cnt {
+    @include d-flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title-wrpr {
+    }
+    &__title {
+        line-height: 1.25em;
+        margin-right: 15px;
+        span{
+            border-bottom: solid 4px currentColor;
+            @media (max-width: 900px) {
+                border-bottom-width: 2px; 
+            }
+        }
+    }
+    &__more {
+        width: 180px;
+        @media (max-width: 900px) {
+            width: 120px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    }
+    
+}

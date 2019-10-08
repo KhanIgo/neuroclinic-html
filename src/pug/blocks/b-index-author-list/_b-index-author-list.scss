@@ -1,0 +1,32 @@
+.b-index-author-list {
+    &-row{
+        position: relative;
+        z-index: 2;
+    
+        background-color: $cRed3;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    &-cnt{
+        padding-bottom: 25px;
+        border-bottom: solid 1px $cPeaches;
+    }
+}
+
+.b-index-author-list {
+    @include d-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    
+    .b-author {
+        width: 280px;
+        margin-top: 35px;
+        
+        &:nth-child(1), &:nth-child(2), &:nth-child(3){
+            margin-top: 0;
+        }
+    }
+}

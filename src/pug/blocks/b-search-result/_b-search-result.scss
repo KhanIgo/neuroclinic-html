@@ -1,0 +1,13 @@
+.b-search-result{
+    padding: 50px 0;
+    
+    &__cnt{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

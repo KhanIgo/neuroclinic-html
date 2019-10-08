@@ -1,0 +1,26 @@
+.b-faq{
+    
+    &-list-post-content{
+        text-align: center;
+        font-size: 1.25em;
+        margin-bottom: 20px;
+    }
+    
+    &-item{
+        &__q{}
+        &__q-inner{}
+        
+        &__a{
+//            max-height: 0;
+//            overflow: hidden;
+//            transition: 500ms ease-in-out;
+            &_opened{
+//                max-height: 9999999px;
+            }
+        }
+        &__a-inner{
+//            padding: 10px;
+        }
+    }
+    
+}

@@ -1,0 +1,30 @@
+.b-calendar{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    background-color: inherit;
+//    display: none;
+    
+    &-cnt{}
+    &__title{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+    }
+    &__title-h{
+        color: $cRed3;
+    }
+    
+    &__desc{
+        color: $cRed3;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    &__cal{
+        margin-top: 25px;
+    }
+}

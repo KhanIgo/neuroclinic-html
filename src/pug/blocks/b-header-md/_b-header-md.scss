@@ -1,0 +1,38 @@
+.b-header-md-search-social {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    @media (max-width: 1150px) {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        z-index: 20;
+        position: absolute;
+        background: white;
+        top: 75px;
+        left: 0;
+        width: 100%;
+//        padding: 10px 0;
+    }
+    @media (max-width: 1150px ) and (min-width: 900px ){
+        max-height: 0;
+        transition: 300ms ease-in-out;
+        &.is-active{
+            max-height: 1000px;
+        }
+    }
+    @media (max-width: 900px){
+        position: relative;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+    }
+}

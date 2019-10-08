@@ -1,0 +1,65 @@
+.b-edu-slider {
+    position: relative;
+    width: 940px;
+    
+    float: left;    
+    @media (min-width: 960px) {
+        margin-left: calc( 50vw - 480px );
+        
+        &:before, &:after{
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            z-index: 9;
+            width: calc( 50vw - 470px );
+            background-color: transparentize($cPeaches, 0.7);
+            top: 0;
+            
+        }
+        &:before{ left: calc( 450px - 50vw ); }
+        &:after{ right: calc( 450px - 50vw ); }
+    }
+    @media (max-width: 950px) {
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        overflow: hidden;
+    }
+    @media (max-width: 500px) {
+        width: 100vw;
+    }
+    
+    &-row{
+        @media (max-width: 900px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+    .owl-item{
+        float: left;
+    }
+    
+    
+    &-row{
+        background-color: $cRed3;
+        overflow: hidden;
+        .b-cnt-title-and-btn-cnt{
+            color: white;
+        }
+        &_transparent{
+            background-color: transparent;
+        }
+    }
+    
+    .owl-prev{
+        left: -83px;
+        z-index: 10;
+    }
+    .owl-next{
+        right: -83px;
+        z-index: 10;
+    }
+}

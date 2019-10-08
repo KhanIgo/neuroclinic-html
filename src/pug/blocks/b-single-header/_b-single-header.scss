@@ -1,0 +1,108 @@
+.b-single-header-row {}
+.b-single-header {
+    @include d-flex;
+    align-items: stretch;
+    
+    @media (min-width: 901px) {
+        max-height: 515px;
+    }
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+    &__left {
+        width: calc( 50vw - 480px + 400px );
+        @include flex-no-resize;
+        @include d-flex;
+        justify-content: flex-end;
+        background-color: white;
+        
+        @media (max-width: 900px){
+            width: 100%;
+            justify-content: flex-start;
+        }
+        
+        &_single-news{
+            color: white;
+            background-color: $cRed3;
+        }
+        &_single-event{
+            background-color: $cPeaches;
+        }
+    }
+    &__left-cnt {
+        width: 400px;
+        @include d-flex;
+        align-items: center;
+        padding: 35px 15px;
+        
+        @media (max-width: 900px){
+            width: 100%;
+            padding: 50px 15px;
+        }
+    }
+    &__right {
+        width: calc( 50vw - 480px + 560px );
+        @include flex-no-resize;
+        overflow: hidden;
+        
+        @media (max-width: 900px){
+            width: 100%;
+        }
+    }
+    &__right-cnt {
+        width: 100%;
+        height: 100%;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    &-clinic-info {
+        @include d-flex;
+        flex-direction: column;
+        align-items: center;
+        &__link {}
+        &__logo {}
+        &__reg-healing{
+            margin-top: 15px;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+
+        &__reg-appointment{
+            font-size: 1.12em;
+            margin-top: 70px;
+        }
+    }
+    
+    
+}
+
+.b-single-header-doctor-info {
+    color: $cRed3;
+    &__name {
+        font-size: 1.5em;
+    }
+    &__specs {
+        margin-bottom: 30px;
+    }
+    &__desc {
+        margin-top: 30px;
+    }
+}
+
+.b-single-header-news-info{
+    &__excerpt{
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+}
+
+.b-single-header-event-info{
+    &__title{
+        margin-bottom: 30px;
+    }
+}
