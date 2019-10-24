@@ -18,6 +18,12 @@
         @include d-flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        
+        &_q{
+            @media (max-width: 900px) {
+                justify-content: space-between;
+            }
+        }
     }
     &-form__item {
         width: 100%;
@@ -30,6 +36,9 @@
         &_col-1-2{
             width: 45%;
             max-width: 500px;
+            @media (max-width: 900px){
+                width: 100%;
+            }
         }
         &_col-1-1{
             width: 100%;

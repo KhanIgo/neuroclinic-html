@@ -1,5 +1,7 @@
 .b-course-item {
     width: 300px;
+    text-decoration: none;
+    color: inherit;
 //    border: solid 1px $greyL-2;
     overflow: hidden;
     &__img-author-desc {
@@ -10,6 +12,9 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 15px 15px 10px;
+        &_sml{
+            height: 180px;
+        }
     }
     &__img-wrpr {
         width: 100%;

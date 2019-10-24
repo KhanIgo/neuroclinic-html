@@ -3,16 +3,49 @@
     flex-wrap: wrap;
     justify-content: space-between;
     @include ptb(25);
+    &_appoint{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
     @media (max-width: 1000px) {
         justify-content: space-around;
     }
     
     &-row{
         background-color: $cRed3;
+        position: relative;
+        z-index: 2;
+        &_appoint{
+            background-color: transparent;
+        }
+        
+        &__beige{
+            display: none;
+            &_appoint{
+                display: block;
+                position: absolute;
+                z-index: -1;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: $cPeaches;
+                
+                width: calc(50vw - 500px);
+                @media (max-width: 1000px) {
+                    display: none;
+                }
+            }
+        }
     }
     &-cnt {
         position: relative;
         z-index: 1;
+        &_appoint{
+            max-width: 1000px;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     
     .b-course-item{

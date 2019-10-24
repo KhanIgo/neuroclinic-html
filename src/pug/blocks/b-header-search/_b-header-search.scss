@@ -1,62 +1,75 @@
-.b-header-search {
+.b-header-search-social {
+    display: block;
     position: absolute;
     background: white;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    z-index: 10;
+    right: 70px;
+    top: 10px;
+    z-index: 55;
+    transition: 500ms ease-in-out;
+    width: calc(100% - 250px);
     overflow: hidden;
-    
-    transition: 350ms ease-in-out;
-    
-    &_lg{
-        top: 10px;
-        right: 65px;
-        max-width: 0;
-    }
-    &_md{
-        display: block;
-        max-height: 150px;
+    visibility: hidden;
+    @media (max-width: 900px){
+        position: relative;
+        width: auto;
+        visibility: visible;
+        right: 0;
         top: 0;
-        @media (min-width: 1151px){
-            display: none;
-        }
-        @media (max-width: 1500px){
-            position: relative;
-            overflow: visible;
-            margin: 10px 0;
-        }
-        @media (max-width: 900px){
-            margin: 30px 0;
-        }
     }
-    
-    
-    
-    &_visible{
-        max-width: 650px;
-    }
-    
-    
-    &__form-wrpr{
-        width: 100%;
-        padding: 10px;
-        @media (max-width: 900px){
-            padding: 10px 0;
-        }
-    }
-    &__form{
+
+    &__viewport {
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
         display: -o-flex;
         display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        transition: 500ms ease-in-out;
+        transform: translateX(100%);
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: flex-end;
+            transform: translateX(0);
+        }
+    }
+    &.is-active{
+        visibility: visible;
+        .b-header-search-social__viewport{
+            transform: translateX(0);
+        }
+    }
+}
+
+
+.b-header-search {
+    flex-grow: 1;
+
+    &__form-wrpr {
+        width: 100%;
+        padding: 10px;
+
+        @media (max-width: 900px) {
+            padding: 10px 0;
+        }
+    }
+
+    &__form {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+
         @media (max-width: 500px) {
             flex-direction: column;
             align-items: stretch;
         }
     }
-    &__input{
+
+    &__input {
         flex-grow: 1;
     }
 }

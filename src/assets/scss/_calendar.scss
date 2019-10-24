@@ -33,6 +33,9 @@
     justify-content: flex-end;
     border-bottom: none !important;
     background: none !important;
+    @media (max-width: 900px) {
+        justify-content: center;
+    }
 }
 .dp_pec_view{
     background: none !important;

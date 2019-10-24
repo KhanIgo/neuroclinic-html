@@ -1,10 +1,16 @@
 .b-toggle-header{
-    display: none;
-    
-    @media (max-width: 1150px) {
+//    display: none;
+    @media (min-width: 900px){
+        position: absolute;
+        top: 30px;
+        right: calc( ( 100vw - 990px ) / 2 - 40px);
+    }
+    @media (max-width: 1050px) {
+        right: 15px;
+    }
+    @media (max-width: 900px) {
         display: block;
         position: absolute;
-        right: 15px;
         top: 25px;
         z-index: 20;
     }

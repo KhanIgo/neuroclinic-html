@@ -3,13 +3,16 @@
     display: flex;
     flex-wrap: nowrap;
     &_lg{
-        @media (max-width: 1150px) {
+        @media (max-width: 1280px) {
             display: none;
         }
     }
     &_md{
-        justify-content: flex-end;
-        margin-bottom: 15px;
+        @media (min-width: 1280px) {
+            visibility: hidden;
+        }
+//        justify-content: flex-end;
+//        margin-bottom: 15px;
     }
     &__item {
         margin: 0 4px;

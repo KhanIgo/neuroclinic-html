@@ -18,12 +18,12 @@ jQuery($=>{
         mode: 'fade',
         pager: false,
         speed: 1000,
+        adaptiveHeight: true,
         onSlideBefore: function ($e, oi, ni) {
             $slide = $jqSlider.find('.b-big-slider-item').eq(ni);
             slide_elements_in($slide);    
         }
     });
-    
     
     function slide_elements_in(target){
         let 

@@ -1,5 +1,6 @@
 .b-big-slider-row{
     width: 100%;
+    opacity: 0;
     .owl-dots{
         display: none;
     }
@@ -14,18 +15,17 @@
 }
 
 .b-big-slider{
-    
-    transform: translateY(30%);
-    opacity: 0;
-    
     @media (min-width: 900px) {
         height: 580px;
         overflow: hidden;
     }
+    @media (max-width: 900px) {
+        height: 350px;
+//        overflow: hidden;
+    }
 }
 
 .b-big-slider-item {
-    height: 580px;
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,8 +36,12 @@
     position: relative;
     
     
+    @media (min-width: 900px){
+        height: 580px;
+    }
     @media (max-width: 900px){
-        height: auto;
+        min-height: 350px;
+        height: 100%;
         padding-top: 0;
     }
     &__cnt{

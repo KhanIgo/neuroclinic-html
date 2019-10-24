@@ -2,10 +2,16 @@
     @include ptb(30);
     &-row{
         background-color: rgba(250, 185, 157, 1);
+        &_appoint{
+            background-color: $cRed;
+        }
     }
     &__title {
         text-align: center;
         color: $cRed;
+        &_appoint{
+            color: white;
+        }
     }
     &__form-wrpr {
         max-width: 780px;

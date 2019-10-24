@@ -1,7 +1,7 @@
 jQuery($=>{
-    var owlConfig, 
-        jqCarousel,
-        carousel,
+    var sliderConfig, 
+        $jqSlider,
+        slider,
         slide_delay = 1,
         t1_time = 0.7,
         t1_delay = 0.5,
@@ -13,50 +13,29 @@ jQuery($=>{
         bg_delay = img_delay + 0.6,
         reset_timeout = 2000;
     
-    owlConfig = {
-        items: 1,
-        margin: 0,
-        loop: true,
-        autoHeight: true,
-        URLhashListener: false,
-        autoplay: false,
-        autoplayTimeout:4000,
-        autoplaySpeed: 2500,
-        autoplayHoverPause: true,
-        navigation: true
-    };
-    jqCarousel = $('.js-big-slider');    
-    jqCarousel.on('initialized.owl.carousel', function(event){
-        let item = $(this).find('.owl-stage')
-        .children()
-        .eq(event.relatedTarget.normalize( event.relatedTarget.current() ));
-        slide_elements_in( $(item) );
-    });
-    
-    carousel = jqCarousel.owlCarousel(owlConfig);
-    jqCarousel.on('changed.owl.carousel', function(event){
-        setTimeout(function () {
-            var $slide = jqCarousel.find('.owl-item.active');
-            slide_elements_in($slide);
-        }, 5);
+    $jqSlider = $('.js-big-slider');    
+    slider = $jqSlider.bxSlider({
+        mode: 'fade',
+        pager: false,
+        speed: 1000,
+        adaptiveHeight: true,
+        onSlideBefore: function ($e, oi, ni) {
+            $slide = $jqSlider.find('.b-big-slider-item').eq(ni);
+            slide_elements_in($slide);    
+        }
     });
     
     function slide_elements_in(target){
-        console.log(target);
         let 
             $slide = target,
             $t1 = $slide.find('.b-big-slider-item__title'), 
             $t2 = $slide.find('.b-big-slider-item__desc');
-        
         TweenMax.from($t1, t1_time, {opacity:0, x: 300, delay: t1_delay});
         TweenMax.from($t2, t2_time, {opacity:0, x: 300, delay: t2_delay});
         
         setTimeout(function(){
-            slide_reset([$t1, $t2]);
-        }, reset_timeout);
-        function slide_reset($objects_arr){
-            TweenMax.set($objects_arr, {clearProps:"all"});
-        }
+            TweenMax.set([$t1, $t2], {clearProps:"all"});
+        }, reset_timeout);        
     }
 });
 jQuery(($) => {
@@ -155,6 +134,7 @@ jQuery($=>{
 //        let $siblings = $item.siblings('.ui-accordeon');
     })
 });
+
 jQuery(($) => {
     let owlConfig,
         $jqCarousel,
@@ -186,13 +166,22 @@ jQuery(($) => {
     carousel = $jqCarousel.owlCarousel(owlConfig);
 
 });
+jQuery( $=>{
+    $('body').on('click', '.js-toggle-searchbar', function(e){
+        $('.b-header-search-social').toggleClass('is-active');
 
+    });
+});
 jQuery($=>{
+    var $body = $('body');
     $('.js-hamburger').click(function (e) {
         e.preventDefault();
+        if(winW>900){
+            $('.b-nav-list__item_hide').find('.b-nav-list__submenu-wrpr').toggleClass('is-active');
+        }
         $(this).toggleClass('is-active');
-        $('.b-header-md-search-social').toggleClass('is-active');
         $('.header__cnt').toggleClass('is-active');
+        $body.toggleClass('g-ovh');
     });
     
 });
@@ -210,9 +199,4 @@ jQuery(function($){
 
 
 
-});
-jQuery( $=>{
-    $('body').on('click', '.js-toggle-searchbar', function(e){
-        $('.b-header-search').toggleClass('b-header-search_visible');
-    });
 });

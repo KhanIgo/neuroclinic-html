@@ -2,21 +2,32 @@
     display: none;
     width: 100%;
     overflow: hidden;
-    @media (max-width: 1150px) {
+    
+    @media (max-width: 1280px) {
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
         width: 100%;
-        z-index: 20;
+        z-index: 55;
         position: absolute;
-        background: white;
-        top: 75px;
-        left: 0;
-        width: 100%;
-//        padding: 10px 0;
+        background-color: white;
+        right: 65px;
+        width: calc( 100% - 225px);
+//        overflow: hidden;
+//        opacity: 0;
+        transition: 500ms ease-in-out;
+        max-width: 0;
+        overflow: hidden;
+        &.is-active{
+//            opacity: 1;
+//            visibility: visible;
+            max-width: 100%;
+        }
     }
     @media (max-width: 1150px ) and (min-width: 900px ){
         max-height: 0;

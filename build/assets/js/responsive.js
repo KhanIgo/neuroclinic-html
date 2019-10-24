@@ -1,47 +1,52 @@
-jQuery(function($){
-    var body = $('body');
-    detect_device_type();
+var md = new MobileDetect(window.navigator.userAgent);
+var winW = window.innerWidth;
+var winH = window.innerHeight;
 
-    $( window ).load( function(){
-        w = $( window ).width();
-    });
+var isDesktop, isTablet, isPhone, device, viewport_orientation, vWidth, vHeight;
+if(md.phone()){
+    isPhone = true;
+    device = 'phone';
+} 
+else isPhone = false;
+if(md.tablet()){
+    device = 'tablet';
+    isTablet = true;
+} 
+else isTablet = false;
+if(!md.mobile()){
+    device = 'desktop';
+    isDesktop = true;
+}
+else isDesktop = false;
+
+jQuery(function($){
+    var $body = $('body');
+    detect_device_type();
     
     $(window).resize(function(){
-        
         if( w != $( window ).width() ){
             detect_viewport_orientation();
-            //set_viewport();
-            w = $( window ).width();
-
-          }
+            winW = window.innerWidth;
+        }
     });
     
     function detect_device_type(){
         detect_viewport_orientation();
-        
-        md = new MobileDetect(window.navigator.userAgent);
-        var phone = md.phone();
-        var tablet = md.tablet();
-        if( !phone && !tablet){
-            device_type = 'desktop';
-        }
-        if(phone) device_type = 'phone';
-        if(tablet) device_type = 'tablet';
-        body = $('body');
-        body.addClass(device_type);
+        $body.addClass(device);
         set_viewport();
     }
+    
     function set_viewport(){
-        if( device_type=='tablet' && viewport_orientation=='landscape'){
+        if( device=='tablet' && viewport_orientation=='landscape'){
             var viewport_content = 'width=1200';
         }
-        else if( device_type=='tablet' && viewport_orientation=='portrait'){
-            var viewport_content = 'width=120';
-        }
-        else if( device_type=='phone' && viewport_orientation=='landscape'){
+        else if( device=='tablet' && viewport_orientation=='portrait'){
             var viewport_content = 'width=1200';
         }
-        else if( device_type=='phone' && viewport_orientation=='portrait'){
+        else if( device=='phone' && viewport_orientation=='landscape'){
+            var viewport_content = 'width=1200';
+        }
+        else if( device=='phone' && viewport_orientation=='portrait'){
             var viewport_content = 'width=480';
             var scale = vWidth/480;
             viewport_content = viewport_content+ ', initial-scale=' +scale;
@@ -50,7 +55,7 @@ jQuery(function($){
         }
         //viewport_content += ', minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no';
         
-        if( device_type=='phone' && viewport_orientation=='portrait'){}
+        if( device=='phone' && viewport_orientation=='portrait'){}
         else{ viewport_content += ', initial-scale=1'; }
         
         //console.log('viewport_content: '+viewport_content);
@@ -73,19 +78,4 @@ jQuery(function($){
     }
     
 });
-window.onload = function () {
-    hideAddressBar();
-    window.addEventListener("orientationchange", function () {
-        hideAddressBar();
-    }, false);
-}
-
-function hideAddressBar() {
-    setTimeout(function () {
-        document.body.style.height = window.outerHeight + 'px';
-        setTimeout(function () {
-            //window.scrollTo(0, 1);
-        }, 1100);
-    }, 1000);
-    return false;
-}
+//window.onload = function () {}
