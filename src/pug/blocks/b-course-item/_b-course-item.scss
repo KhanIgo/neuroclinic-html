@@ -4,6 +4,13 @@
     color: inherit;
 //    border: solid 1px $greyL-2;
     overflow: hidden;
+    
+    &_category{
+        .b-author{
+            display: none !important;
+        }
+    }
+    
     &__img-author-desc {
         width: 300px;
         height: 200px;

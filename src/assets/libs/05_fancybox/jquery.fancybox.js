@@ -25,6 +25,7 @@
   // Check if fancyBox is already initialized
   // ========================================
 
+    
   if ($.fn.fancybox) {
     console.info("fancyBox already initialized");
 

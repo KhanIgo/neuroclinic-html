@@ -1,15 +1,20 @@
 .b-logo-link{
-    display: none; // Временно
+//    display: none; // Временно
     
-//    display: block;
-    width: 125px;
-    height: 25px;
-    background-color: #333333;
+    display: block;
+//    width: 125px;
+//    height: 25px;
     
-    @include mask('../img/b-logo-link/logo.svg');
-    @include mask-repeat(no-repeat);
-    @include mask-size(contain);
-    @include mask-position(left center);
+
+    width: 100px;
+    height: 20px;
+    background: url('../img/b-logo-link/logo-2.png') no-repeat;
+    
+//    background-color: #333333;
+//    @include mask('../img/b-logo-link/logo.svg');
+//    @include mask-repeat(no-repeat);
+//    @include mask-size(contain);
+//    @include mask-position(left center);
     
     &_lg{
         @media (max-width: 1151px) {

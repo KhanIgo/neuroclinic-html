@@ -32,6 +32,9 @@
         @include d-flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        &_appoint{
+            color: white;
+        }
         @media (max-width: 650px) {
             justify-content: space-around;
         }

@@ -20,6 +20,9 @@ body{
     padding-left: $paddings;
     padding-right: $paddings;
 }
+.d-none{
+    display: none;
+}
 .row-flex{
     width: 100%;
     padding-left: $paddings;
@@ -37,6 +40,9 @@ body{
 }
 .j-right{
     justify-content: flex-end;
+}
+.flex-end{
+    justify-content: flex-end !important;
 }
 body>.row, body>.row-flex{
     padding-left: 0;

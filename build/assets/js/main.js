@@ -9,9 +9,12 @@ jQuery($ => {
     }
     
     
-    
-    
-    
+    if(window.history.length>1){
+        $('.js-go-back').removeClass('d-none');
+    }
+    $('.js-go-back').click(function (e) {
+        window.history.go(-1);
+    });
     
     
 //    document.addEventListener( 'wpcf7submit', function( event ) {
@@ -19,4 +22,6 @@ jQuery($ => {
 //        console.log(event);
 //    }, false );
 });
+
+
 

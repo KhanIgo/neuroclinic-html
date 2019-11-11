@@ -7,10 +7,17 @@
     display: flex;
     flex-wrap: wrap;
     
-    &__title-wrpr{}
+    &__cnt{
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+    &__title-wrpr{
+        font-size: 0.9em;
+    }
     
     &__title{
-        border-bottom: solid 2px currentColor;
+        
+//        border-bottom: solid 2px currentColor;
         
         &_c-1{
             color: white;
@@ -56,7 +63,8 @@
         display: flex;
         flex-wrap: wrap;
         >.b-course-item{
-            margin-bottom: 16px !important;
+//            margin-bottom: 16px !important;
+            margin: 15px 10px;
         }
         >.b-edu-sml{
             margin-bottom: 20px !important; 
