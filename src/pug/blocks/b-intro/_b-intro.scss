@@ -56,7 +56,7 @@
                 transform: scale(1.15);
             }
             .b-intro__bg-color{
-                background-color: transparentize($cRed3, 0.2);
+                background-color: rgba(250, 185, 158, 0.8);
             }
         }
     }
@@ -81,7 +81,8 @@
         left: 0;
         top: 0;
         transition: 0.5s ease-in-out;
-        background-color: transparentize($cRed3, 0.8);
+//        background-color: transparentize($cRed3, 0.8);
+        background-color: rgba(250, 185, 158, 0.2);
     }
     &__item-inner {
         width: 100%;
@@ -140,7 +141,8 @@
 
 .desktop{
     .b-intro__item{
-        height: calc(100vh - 85px - 102px);
+//        height: calc(100vh - 85px - 102px);
+        height: calc(100vh - 85px - 85px);
         justify-content: center;
         padding-top: 50px;
         padding-bottom: 50px;

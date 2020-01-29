@@ -18,14 +18,17 @@ jQuery($ => {
         $body.css('padding-top', bodyPT);
     }
 
-    var ctrl = new ScrollMagic.Controller();
+//    var ctrl = new ScrollMagic.Controller();
 
     // big-slider animation begin  
     {
 //        var $bs = $('.b-big-slider-row');
-        var $bs = $('.b-intro');
-        var abs = TweenMax.to($bs, 1, { opacity:1, delay:0.5 });
-        var sabs = new ScrollMagic.Scene({offset: 0, reverse: false}).setTween(abs).addTo(ctrl);
+//        var $bs = $('.b-intro');
+//        var abs = TweenMax.to($bs, 1, { opacity:1, delay:0.5 });
+        var bs = document.querySelector('.b-intro');
+        TweenMax.to(bs, 1, { opacity:1, delay:0.5 });
+        
+//        var sabs = new ScrollMagic.Scene({offset: 0, reverse: false}).setTween(abs).addTo(ctrl);
     }
     // big-slider animation end    
 

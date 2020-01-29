@@ -3,6 +3,7 @@ button {
     font-size: 1em;
     cursor: pointer;
     text-decoration: none;
+    background: transparent;
 }
 
 .btn {
@@ -267,6 +268,54 @@ i{
 }
 
 
+.ui__invalid{
+    &_is-empty, &_email, &_phone{
+        border-bottom: solid 2px red;
+    }
+    &_message{
+        position: absolute;
+        color: inherit;
+        font-size: 0.8em;
+        bottom: 0;
+        transform: translateY(1.15em);
+    }
+}
+.ui{
+    &__has-required-input{
+        position: relative;
+        
+        &:after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            right: 5px;
+//            transform: translateY(-15px);
+            top: 35px;
+            @include mask('../img/ui/icon__required.svg');
+            @include mask-size(contain);
+            background-color: currentColor;
+//            background-color: red;
+        }
+    }
+}
+
+.ui-popup{
+    width: 100%;
+    max-width: 1000px;
+    &_wide{
+        max-width: 100%;
+    }
+    &_narrow{
+        max-width: 500px;
+    }
+
+    &__cnt{
+        width: 100%;
+    }
+}
+
 
 
 .bx-controls-direction, .owl-nav{
@@ -334,3 +383,6 @@ i{
     }
 }
 
+.wpcf7{
+    width: 100%;
+}

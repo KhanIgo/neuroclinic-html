@@ -136,6 +136,7 @@ jQuery($=>{
     })
 });
 
+
 jQuery(($) => {
     let owlConfig,
         $jqCarousel,
@@ -186,7 +187,6 @@ jQuery($=>{
     });
     
 });
-
 
 jQuery(function($){
     var form = $('.js-date-filter-form');

@@ -32,20 +32,21 @@
         top: 0;
         
         &_has-img{
-            background: #333;
+//            background: #333;
         }
         &_has-no-img{
             @include grad;
         }
     }
     &__img {
-        opacity: 0.6;
+//        opacity: 0.6;
         @include img-cover;
     }
     
     
     &__desc {
-        color: white;
+//        color: white;
+        color: $cRed;
         font-weight: 600;
         font-size: 1.12em;
         text-decoration: none;

@@ -17,6 +17,7 @@
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     background: none !important;
+    
 }
 .dp_pec_nav{
     margin-left: 0 !important;
@@ -56,3 +57,39 @@
 .dp_pec_nav_monthly, .dp_pec_content {
     background: white !important;
 }
+
+
+.dp_pec_view__show-all-teasers{
+    display: none !important;
+}
+.show-only{
+    .dp_pec_view__show-all-teasers{
+        display: inline-block !important;
+    }
+    
+    .event-teaser{
+        display: none;
+    }
+    
+    &_course{
+        .event-teaser-course{
+            display: inline-block;
+        }
+    }
+    &_booking{
+        .event-teaser-booking{
+            display: inline-block;
+        }
+    }
+}
+.dp_pec_view__toggle-teasers{
+    &.is-active{
+        display: none !important;
+    }
+}
+
+
+
+
+
+

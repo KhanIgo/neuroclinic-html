@@ -25,7 +25,6 @@ jQuery(($) => {
 //        navigation: true
     };
     $jqCarousel = $('.js-news-slider');
-
     carousel = $jqCarousel.owlCarousel(owlConfig);
 
 });

@@ -6,11 +6,16 @@
             background-color: $cRed;
         }
     }
+    &-cnt{
+        flex-direction: column;
+        align-items: center;
+    }
     &__title {
         text-align: center;
         color: $cRed;
         &_appoint{
             color: white;
+            margin: 10px auto 15px;
         }
     }
     &__form-wrpr {
@@ -40,16 +45,24 @@
         }
         @media (max-width: 500px) {
             flex-direction: column;
+            align-items: center;    
         }
         
     }
     
     &__filter{
         position: relative;
+        @media (max-width: 500px) {
+            margin-bottom: 15px;
+            font-size: 1.15em;
+        }
         &:hover{
             ul{
                 visibility: visible;
                 height: auto;
+                @media (max-width: 500px){
+                    display: block;
+                }
             }
         }
     }
@@ -73,9 +86,21 @@
             height: 0px;
             overflow: hidden;
         }
+        @media (max-width: 500px){
+            display: none;
+        }
         li{
             margin-right: 15px;
+            @media (max-width: 500px){
+                margin-bottom: 10px;
+            }
         }
+    }
+    &__ext-inf{
+        margin-top: 15px;
+        margin-bottom: 35px;
+        text-align: center;
+        
     }
     a {
         color: inherit;

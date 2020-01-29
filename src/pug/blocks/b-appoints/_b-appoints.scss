@@ -13,6 +13,9 @@
     }
     &__title-wrpr{
         font-size: 0.9em;
+        @media (max-width: 700px) {
+            text-align: center;
+        }
     }
     
     &__title{
@@ -37,6 +40,13 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 25px 15px;
+        @media (max-width: 980px) {
+            width: 50% !important;
+        }
+        
+        @media (max-width: 700px) {
+            width: 100% !important;
+        }
 //        @include ptb(25);
     }
     &__col_c-1{
@@ -44,15 +54,29 @@
         flex-shrink: 0;
         flex-grow: 0;
         background-color: $cPeaches;
-        .b-appoints__title-wrpr{
-            margin-left: auto;
+        
+        @media (max-width: 700px) {
+            width: 100%;
         }
+        @media (min-width: 700px) {
+            .b-appoints__title-wrpr{ margin-left: auto; }    
+        }
+        
     }
+    
     &__col_c-2{
-//        width: 67%;
         width: calc( 100% - 350px );
         flex-shrink: 0;
         flex-grow: 1;
+        @media (max-width: 700px) {
+            width: 100%;
+        }
+        
+        .b-course-item_sml{
+            margin: 0 !important;
+            margin-bottom: 15px !important;
+        }
+        
     }
     &__items{
         margin-top: 25px;
@@ -62,18 +86,27 @@
         display: -o-flex;
         display: flex;
         flex-wrap: wrap;
+        @media (max-width: 700px) {
+            justify-content: space-around;
+        }
         >.b-course-item{
-//            margin-bottom: 16px !important;
             margin: 15px 10px;
         }
         >.b-edu-sml{
-            margin-bottom: 20px !important; 
+            margin-bottom: 20px; 
         }
         &_с-1{
             justify-content: flex-end;
+            @media (max-width: 700px) {
+                justify-content: space-around;
+            }
+            
         }
         &_с-2{
             justify-content: space-between;
+            @media (max-width: 700px) {
+                justify-content: space-around;
+            }
         }
     }
 }

@@ -3,8 +3,15 @@
     height: 200px;
     position: relative;
     margin: 0px 15px 20px 15px;
+    overflow: hidden;
+    &:hover{
+        .b-news-item__img-wrpr{
+            transform: scale(1.15);
+        }
+    }
     &_in-slider{
         margin: 0;
+        float: left;
     }
     @media (min-width: 1000px) {
         &:nth-child(3n+1){
@@ -25,6 +32,7 @@
         z-index: 1;
         left: 0;
         top: 0;
+        transition: 450ms ease-in-out;
         
         &_has-img{
             background-color: #333;
@@ -49,6 +57,7 @@
         flex-direction: column;
         justify-content: space-between;
         color: white;
+        
         padding: 15px 15px 10px;
     }
     &__date {
@@ -58,6 +67,8 @@
         text-decoration: none;    
         font-size: 1.12em;
         font-weight: 500;
+        color: inherit;
+//        color: $cRed;
         letter-spacing: 0.02em;
     }
 }

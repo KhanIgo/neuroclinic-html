@@ -21,7 +21,40 @@ jQuery($ => {
 //    //    alert( "Fire!" );
 //        console.log(event);
 //    }, false );
+    
+    
+    
+    let dpPec = $('.dp_pec_wrapper');
+    let cPrefix = 'show-only';
+    $('body').on('click', '.js-toggle-calendar-teaser', function(e) {
+        e.preventDefault();
+        let type = $(this).data('post-type');
+        let dpPecCssClass = cPrefix+'_'+type;
+        
+        $(this).siblings('a').removeClass('is-active');
+        $(this).addClass('is-active');
+        
+        dpPec.removeClass(cPrefix);
+        dpPec.removeClass(cPrefix+'_course');
+        dpPec.removeClass(cPrefix+'_booking');
+        
+        if(type != 'all'){
+            dpPec.addClass(cPrefix);
+            dpPec.addClass(dpPecCssClass);
+        }
+    });
 });
 
 
+
+function isExist(el){
+    if( typeof(el)!='undefined' && el!=null ) return true;
+    else return false;
+}
+
+
+//event-teaser-common
+//event-teaser-booking
+//event-teaser-course
+//
 

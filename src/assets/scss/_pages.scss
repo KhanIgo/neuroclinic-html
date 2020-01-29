@@ -4,3 +4,24 @@
 .cnt_post-144{
     max-width: 700px;
 }
+
+
+.text-simple{
+    &__cnt {
+        
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+}
+
+.post-type-archive-appoints{
+    .b-courses-header{
+        padding-bottom: 0;
+        h{
+            margin-bottom: 0;
+        }
+    }
+}

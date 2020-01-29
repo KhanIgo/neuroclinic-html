@@ -1,6 +1,6 @@
 jQuery($=>{
     $('.b-courses-header__filter-link-main').click(function (e) {
-        e.preventDefault();
+//        e.preventDefault();
     });
     
 //    var form = $('#js-course-search-form');

@@ -23,4 +23,38 @@
         }
     }
     
+    
+    
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 950px;
+        justify-content: space-between;
+        margin: 35px auto 0;
+        
+        .b-course-purchase-form__item{}
+        .wpcf7-response-output{
+            display: none !important;
+        }
+        .ajax-loader{
+            display: none !important;
+        }
+    }
+    
+}
+
+
+.b-faq-form{
+    &__title{
+        text-align: center;
+    }
+}
+.b-faq-form-row {
+    padding: 35px 0;
+    background-color: $cBeige;
+    position: relative;
+}
+.b-faq-form-cnt {
+        
 }

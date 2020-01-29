@@ -14,15 +14,25 @@
     color: inherit;
     &_sml{
 //        transform: scale(0.7);
-        zoom: 0.7;
+//        zoom: 0.7;
+        width: 320px;
+        height: 180px;
+        padding: 20px 15px 15px !important;
+        margin-bottom: 15px !important;
+        
+        .b-edu-sml__author-photo-wrpr{
+            width: 135px;
+            height: 135px;
+        }
         .b-edu-sml__title{
-            font-size: 1.5em;
+//            font-size: 1.5em;
+            font-size: 1em;
             font-weight: 600;
         }
     }
     @media (max-width: 500px ) {
-        width: 100vw;
-        padding: 10px;
+    //        width: 100vw;
+//        padding: 10px;
     }
     &_t-1{
         color: white;
@@ -92,7 +102,8 @@
     }
     &__title {
         text-decoration: none;
-        color: inherit;
+//        color: inherit;
+        color: $cRed;
         
         font-size: 1.125em;
         font-weight: 500;    
