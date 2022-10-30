@@ -15,7 +15,7 @@
     "babel-preset-vue": "^2.0.2",
     "babelify": "^10.0.0",
     "bemto.pug": "git+https://github.com/kizu/bemto.git",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.27.10",
     "browserify": "^16.5.0",
     "buffer": "^5.2.1",
     "del": "^3.0.0",
