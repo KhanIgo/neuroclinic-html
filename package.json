@@ -19,7 +19,7 @@
     "browserify": "^16.5.0",
     "buffer": "^5.2.1",
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-browserify": "^0.5.1",
